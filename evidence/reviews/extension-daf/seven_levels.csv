@@ -1,0 +1,8 @@
+K,hits_S_DAF,hits_S,hits_C,overlap_ids_S_DAF_S,overlap_hits_S_DAF_S,hit_only_S,hit_only_S_DAF_vs_S,hit_diff_S_minus_S_DAF,identity_S_S_DAF,overlap_ids_S_DAF_C,overlap_hits_S_DAF_C,hit_only_C,hit_only_S_DAF_vs_C,hit_diff_C_minus_S_DAF,identity_C_S_DAF,overlap_ids_S_C,hits_S_minus_C,overlap_hits_S_C,hit_only_S_vs_C,hit_only_C_vs_S,identity_S_C
+20,20,20,20,19,19,1,1,0,True,19,19,1,1,0,True,18,0,18,2,2,True
+50,49,49,50,50,49,0,0,0,True,49,49,1,0,1,True,49,-1,49,0,1,True
+100,99,99,99,99,98,1,1,0,True,97,96,3,3,0,True,97,0,96,3,3,True
+200,198,198,199,197,195,3,3,0,True,198,197,2,1,1,True,197,-1,196,2,3,True
+500,490,489,490,493,483,6,7,-1,True,493,484,6,6,0,True,491,-1,481,8,9,True
+1000,980,980,982,991,971,9,9,0,True,987,969,13,11,2,True,990,-2,972,8,10,True
+2000,1939,1935,1946,1974,1913,22,26,-4,True,1970,1919,27,20,7,True,1960,-11,1909,26,37,True
