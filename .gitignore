@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.gz
+/data/
+/results/
+/docs/
+/evidence/03_五位专家角色卡.md
+/evidence/s_decision.md
+/evidence/node_4_rankings_and_S_signoff.md

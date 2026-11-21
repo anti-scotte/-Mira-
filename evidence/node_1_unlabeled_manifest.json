@@ -1,0 +1,155 @@
+{
+  "scope": "已有盲态文件；未访问候选 DFT 标签，未联网",
+  "input_acceptance": "通过",
+  "repo": "https://github.com/janosh/matbench-discovery",
+  "commit": "6d587c184cdb4a4865dc0b15b04a5e6d77ed464f",
+  "unit": "eV/atom",
+  "files": [
+    {
+      "path": "shared/unlabeled_candidate_pool.csv",
+      "bytes": 4359998,
+      "sha256": "15d796d5d9a93c05794ab40ad5e88f3e8b62c3c884ae79dbc734dbfe3c8d360c",
+      "upstream_sha256": "15d796d5d9a93c05794ab40ad5e88f3e8b62c3c884ae79dbc734dbfe3c8d360c"
+    },
+    {
+      "path": "shared/reference_hull_energies.csv",
+      "bytes": 578613,
+      "sha256": "f83ca94322c7a86afe43ac6cce8da7aecc374929f31aebb239b59292932df88d",
+      "upstream_sha256": "f83ca94322c7a86afe43ac6cce8da7aecc374929f31aebb239b59292932df88d"
+    },
+    {
+      "path": "shared/model_manifest.json",
+      "bytes": 45412,
+      "sha256": "24d5372cadcda6fae24fab5667abe755389b3d2d7d0925f3ab81dff4cd8af0e1",
+      "upstream_sha256": null
+    },
+    {
+      "path": "shared/data_alignment.md",
+      "bytes": 5396,
+      "sha256": "ad0194fc7cf8481603c400f31b55018c50e2eb4f7e7cf543ca54916ea01c4382",
+      "upstream_sha256": null
+    }
+  ],
+  "rows": 23821,
+  "models": 15,
+  "finite_predictions": 357315,
+  "champion": "dpa-4.1-max-oam-pft",
+  "model_versions": [
+    {
+      "model_id": "dpa-4.1-max-oam-pft",
+      "model_version": null,
+      "card_sha256": "b2b3430c311e72299e0c08de2ecd078e0b0f0bc5000197e54d27c29591b57868",
+      "sha256": "4767371b15c5169106f352e15aa13b0859e83a0f047e17cc822ff3dde42328eb",
+      "source_col": "e_form_per_atom"
+    },
+    {
+      "model_id": "dpa-4.1-max-oam",
+      "model_version": null,
+      "card_sha256": "e4251dbb2bbe2c2efc49805a16ee30aa0a500852e282ad9d26986a77595cffc0",
+      "sha256": "bdc582faa9097b07d4fde15c39f01bd31be80e874d4d73b1ca98eb22a2fd86d8",
+      "source_col": "e_form_per_atom"
+    },
+    {
+      "model_id": "equiformer-v3-oam",
+      "model_version": "v2026.04.07",
+      "card_sha256": "e09d2b140db4fb658af45c00e3413e5490ea0bad74eea50886a8421e60788f4b",
+      "sha256": "f9b7990642deba60d6f9e09f315789c87fa8a649382408cf5c5c927b02423b59",
+      "source_col": "e_form_per_atom"
+    },
+    {
+      "model_id": "tece-oam-rra-1.0",
+      "model_version": "v2026.07.05",
+      "card_sha256": "ca791fb629330e652b865aa75b623e62bd20dabf986bed43e782494ff4ee37fd",
+      "sha256": "a41737ad814c16af7b1f012ee9e840fda0e0b493d8b50d15b48fa4742402be58",
+      "source_col": "e_form_per_atom"
+    },
+    {
+      "model_id": "equflashv2-45m-oam",
+      "model_version": "v2026.06.11",
+      "card_sha256": "41525968f00d5513ee61e6c8b46090717945346693d92407951b0d6fc2d1088b",
+      "sha256": "7d026883006b851e7bb5020faf77164dd976d43d528030c59806827698b33729",
+      "source_col": "e_form_per_atom"
+    },
+    {
+      "model_id": "tace-oam-rra-preview",
+      "model_version": "0.2.0",
+      "card_sha256": "f56fbd9a3853500c5ff0e33133e7f23128dc839505cd8574703e532dc946b389",
+      "sha256": "278b3567fb6f59b633d15ed31ef52f6d220d17a73c17d2c0ef80c8d14be9ef5f",
+      "source_col": "e_form_per_atom"
+    },
+    {
+      "model_id": "prophet-oame-mbd",
+      "model_version": "v1.0.0",
+      "card_sha256": "0bf38bf96fbc2b75d850aa2dd2b9253f68f15741dc1849a5315d5b242bcaff0b",
+      "sha256": "ffd882d49e349cb6191606465a6c3b902b15b003632b29bc0a69532b70212f6b",
+      "source_col": "e_form_per_atom"
+    },
+    {
+      "model_id": "esen-30m-oam",
+      "model_version": "fairchem_core-1.10.0",
+      "card_sha256": "174d59ae4d4a673309311513e2a9447c1373caf879ba835cd8cfa4fdfca2d104",
+      "sha256": "291a4458266e730a877c96c2536942ce840b256a9be1355133f6bdc1638d0459",
+      "source_col": "e_form_per_atom"
+    },
+    {
+      "model_id": "grace-3l-oam-l",
+      "model_version": "1",
+      "card_sha256": "2e6e6f445e03840c854b9f2bab85580db51a5be1e36b4172feca90640556c54b",
+      "sha256": "ddb5007d235f25b68a09b9c07fdce595320f4d50af1fa63ae357a454ce01208f",
+      "source_col": "e_form_per_atom"
+    },
+    {
+      "model_id": "pet-oam-xl-1.0.0",
+      "model_version": "1.0.0",
+      "card_sha256": "334f84383c8819cf776583863620456b11c7a7639d3d7c6fe9e891386a57e823",
+      "sha256": "86e76986aa13086f454af593a1dfd70ff5eac7927ce6f1b0b94e0c5f186ac53c",
+      "source_col": "e_form_per_atom"
+    },
+    {
+      "model_id": "matris-10m-oam",
+      "model_version": "v1",
+      "card_sha256": "6f86be247eb125ccc3ea29c378c4121fbdbb2f3ae6a1618e2faccc7f12f80bcc",
+      "sha256": "a550f13dd3139704a3b4af5fa0f53989e7a174db4e07ccc001f03d514e7a5dd8",
+      "source_col": "e_form_per_atom"
+    },
+    {
+      "model_id": "dpa-4.1-air-oam",
+      "model_version": null,
+      "card_sha256": "01243614e63405a01f4a04eac1bc81a1be9878d00b5403efb7868ac9e129f70d",
+      "sha256": "ca6f0047f2269d039214cc8089a063284ac7cfdbfa347d07932ab0c96346c214",
+      "source_col": "e_form_per_atom"
+    },
+    {
+      "model_id": "equflash-29m-oam",
+      "model_version": "v2025.06.23",
+      "card_sha256": "b40454ab53afea0c99b7975a5aba2a12426854df6c0dc0259bac64321a613b22",
+      "sha256": "b1eecb4a236ee794bc88a9048f0ec1582568c205a7f95b593f61e80bfdc7d8c8",
+      "source_col": "e_form_per_atom"
+    },
+    {
+      "model_id": "eqv2-m-omat-salex-mp",
+      "model_version": "v2024.10.18",
+      "card_sha256": "737e91cde69b2bf0d0647e63362e7e43cabec4fffab9eae1926f4284b729ff98",
+      "sha256": "b21f337b05bb5043d47ea17e3e61aa819bb3c46e2cb18923d9f07829b3cce11e",
+      "source_col": "e_form_per_atom"
+    },
+    {
+      "model_id": "tace-oam-l",
+      "model_version": "0.2.0",
+      "card_sha256": "d19fd9dea08e6f69befab625a96ac1eeb9c4f16cc85cd1bb10cf2216351a701b",
+      "sha256": "368a1c5bfa20fc9b7cbe0898505ae6bb24f188c27edd15afc26f3d5ab67c6272",
+      "source_col": "e_form_per_atom"
+    }
+  ],
+  "checks": [
+    "两表列名严格匹配白名单",
+    "逐行 ID 唯一、非空且两表同序",
+    "Composition 全数通过含氧且非单质规则",
+    "预测和参考能量全数有限",
+    "两 CSV 与上游 SHA-256 相符",
+    "模型登记版本与固定提交、预测列、源文件摘要交叉核对"
+  ],
+  "source_limit": "原始压缩文件、上游代码及模型卡未在本轮重读；只核对既有校验记录。无上游独立摘要的文档只登记本次摘要。",
+  "c_signoff": "待独立签认",
+  "freeze_digest": null
+}
