@@ -1,0 +1,1165 @@
+{
+  "schema": "direction1_stage3_recheck_v1",
+  "task": "方向一对 RUN-20261121-STAGE3-02 第三阶段 F1 公式的修订复算",
+  "input_artifact": "shared/input_verification.json",
+  "provenance_note": "交接清单记录的是云端副本路径；本轮在 Windows 本地项目按其中 SHA-256 验证原始 gzip、冻结回执及使用的冻结件。WBM 以实读完整表头为准。",
+  "previous_summary_f1": {
+    "reported_approx": 0.2047,
+    "status": "原参考能公式有误，已由修订复算取代"
+  },
+  "backup": {
+    "original": {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\第三阶段本地修订\\核验结果.json",
+      "bytes": 513,
+      "sha256": "07babb5c1feb5133145ee36dac47c88d9e4d4518f21cbe7a5bfd22780ebe65e8"
+    },
+    "backup": {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\第三阶段本地修订\\方向一复算_20261121T055153478292Z\\核验结果_旧件备份.json",
+      "bytes": 513,
+      "sha256": "07babb5c1feb5133145ee36dac47c88d9e4d4518f21cbe7a5bfd22780ebe65e8"
+    },
+    "created_and_verified_at_utc": "2026-11-21T05:51:53.480161+00:00",
+    "sha256_match": true,
+    "backup_before_execution": true
+  },
+  "execution": {
+    "command_line": "C:\\Users\\Sysfr\\AppData\\Local\\Programs\\Python\\Python312\\python.exe 第三阶段本地修订\\recheck.py",
+    "argv": [
+      "C:\\Users\\Sysfr\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "第三阶段本地修订\\recheck.py"
+    ],
+    "cwd": "E:\\codex\\Re0\\Mathbench Discovery\\第三阶段本地修订\\方向一复算_20261121T055153478292Z\\isolated_project",
+    "project_root": "E:\\codex\\Re0\\Mathbench Discovery",
+    "script_sha256": "b23b4f75de8c15a1e372aee06e8b8a048256fb312a52ba90c48bb272b4cf17a6",
+    "isolated_copies": [
+      {
+        "original": {
+          "path": "E:\\codex\\Re0\\Mathbench Discovery\\第三阶段本地修订\\recheck.py",
+          "bytes": 2826,
+          "sha256": "b23b4f75de8c15a1e372aee06e8b8a048256fb312a52ba90c48bb272b4cf17a6"
+        },
+        "isolated": {
+          "path": "E:\\codex\\Re0\\Mathbench Discovery\\第三阶段本地修订\\方向一复算_20261121T055153478292Z\\isolated_project\\第三阶段本地修订\\recheck.py",
+          "bytes": 2826,
+          "sha256": "b23b4f75de8c15a1e372aee06e8b8a048256fb312a52ba90c48bb272b4cf17a6"
+        }
+      },
+      {
+        "original": {
+          "path": "E:\\codex\\Re0\\Mathbench Discovery\\64706751.gz",
+          "bytes": 12745623,
+          "sha256": "adbdd8b24086d4888195d8894c77f6d5fb29ce33bbb5d7d3898b4d79e964dc54"
+        },
+        "isolated": {
+          "path": "E:\\codex\\Re0\\Mathbench Discovery\\第三阶段本地修订\\方向一复算_20261121T055153478292Z\\isolated_project\\64706751.gz",
+          "bytes": 12745623,
+          "sha256": "adbdd8b24086d4888195d8894c77f6d5fb29ce33bbb5d7d3898b4d79e964dc54"
+        }
+      },
+      {
+        "original": {
+          "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\恢复第三阶段揭晓与冠军F1核算-hpp5x5x4\\node_1_e9c693bf-f122-4e0e-9861-8a07ae436c79\\第1轮-6af91d6b\\scratch\\raw\\70836372.gz",
+          "bytes": 1315880,
+          "sha256": "4767371b15c5169106f352e15aa13b0859e83a0f047e17cc822ff3dde42328eb"
+        },
+        "isolated": {
+          "path": "E:\\codex\\Re0\\Mathbench Discovery\\第三阶段本地修订\\方向一复算_20261121T055153478292Z\\isolated_project\\Mira产物\\恢复第三阶段揭晓与冠军F1核算-hpp5x5x4\\node_1_e9c693bf-f122-4e0e-9861-8a07ae436c79\\第1轮-6af91d6b\\scratch\\raw\\70836372.gz",
+          "bytes": 1315880,
+          "sha256": "4767371b15c5169106f352e15aa13b0859e83a0f047e17cc822ff3dde42328eb"
+        }
+      },
+      {
+        "original": {
+          "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\有限预算下S与C命中对比-l8dpcu47\\node_3_7f0af346-b198-4858-9cbf-78e026eb3d88\\第1轮-47d95033\\stage2_run\\budget_lists_7tier.json",
+          "bytes": 162895,
+          "sha256": "d2061c4394553b6e229555a4760296811bf82db6595b7a6d755371b0be94465c"
+        },
+        "isolated": {
+          "path": "E:\\codex\\Re0\\Mathbench Discovery\\第三阶段本地修订\\方向一复算_20261121T055153478292Z\\isolated_project\\Mira产物\\有限预算下S与C命中对比-l8dpcu47\\node_3_7f0af346-b198-4858-9cbf-78e026eb3d88\\第1轮-47d95033\\stage2_run\\budget_lists_7tier.json",
+          "bytes": 162895,
+          "sha256": "d2061c4394553b6e229555a4760296811bf82db6595b7a6d755371b0be94465c"
+        }
+      },
+      {
+        "original": {
+          "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\恢复第三阶段揭晓与冠军F1核算-hpp5x5x4\\node_5_53b3bd2f-45cd-43b3-bcfd-e3afa8ae9094\\第1轮-6af91d6b\\scratch\\stage3\\out\\hits_s_top20.csv",
+          "bytes": 1250,
+          "sha256": "4a8ab2a6aea32aaf81c095add8d1da2952ee37e1eec74ff93e0ef8d7b3f6a533"
+        },
+        "isolated": {
+          "path": "E:\\codex\\Re0\\Mathbench Discovery\\第三阶段本地修订\\方向一复算_20261121T055153478292Z\\isolated_project\\Mira产物\\恢复第三阶段揭晓与冠军F1核算-hpp5x5x4\\node_5_53b3bd2f-45cd-43b3-bcfd-e3afa8ae9094\\第1轮-6af91d6b\\scratch\\stage3\\out\\hits_s_top20.csv",
+          "bytes": 1250,
+          "sha256": "4a8ab2a6aea32aaf81c095add8d1da2952ee37e1eec74ff93e0ef8d7b3f6a533"
+        }
+      },
+      {
+        "original": {
+          "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\恢复第三阶段揭晓与冠军F1核算-hpp5x5x4\\node_5_53b3bd2f-45cd-43b3-bcfd-e3afa8ae9094\\第1轮-6af91d6b\\scratch\\stage3\\out\\hits_c_top20.csv",
+          "bytes": 1263,
+          "sha256": "c2a662612d277ee46f2c2a957fa4452004f5d8593a64e248143e7ee828e88422"
+        },
+        "isolated": {
+          "path": "E:\\codex\\Re0\\Mathbench Discovery\\第三阶段本地修订\\方向一复算_20261121T055153478292Z\\isolated_project\\Mira产物\\恢复第三阶段揭晓与冠军F1核算-hpp5x5x4\\node_5_53b3bd2f-45cd-43b3-bcfd-e3afa8ae9094\\第1轮-6af91d6b\\scratch\\stage3\\out\\hits_c_top20.csv",
+          "bytes": 1263,
+          "sha256": "c2a662612d277ee46f2c2a957fa4452004f5d8593a64e248143e7ee828e88422"
+        }
+      }
+    ],
+    "purpose_of_isolation": "原脚本固定写同目录的核验结果.json；保持原脚本字节不变，在项目内的隔离副本执行，确保旧文件不被覆盖。",
+    "started_at_utc": "2026-11-21T05:51:53.522289+00:00",
+    "ended_at_utc": "2026-11-21T05:51:54.962007+00:00",
+    "elapsed_seconds": 1.4369999999980791,
+    "exit_code": 0,
+    "stdout": "F1=0.9346141647, hits={'S': 20, 'C': 20}\r\n",
+    "stderr": "",
+    "stdout_log": {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\第三阶段本地修订\\方向一复算_20261121T055153478292Z\\stdout.log",
+      "bytes": 42,
+      "sha256": "a3ad255cf540bdb9f24a13ca6a76581c427435134f588a655fe32396f8a5b37c"
+    },
+    "stderr_log": {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\第三阶段本地修订\\方向一复算_20261121T055153478292Z\\stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "archived_result": {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\第三阶段本地修订\\方向一复算_20261121T055153478292Z\\核验结果_本次实跑.json",
+      "bytes": 513,
+      "sha256": "07babb5c1feb5133145ee36dac47c88d9e4d4518f21cbe7a5bfd22780ebe65e8"
+    }
+  },
+  "archived_result_data": {
+    "n": 215488,
+    "tp": 30939,
+    "fp": 2326,
+    "tn": 180220,
+    "fn": 2003,
+    "f1": 0.9346141646653677,
+    "card_f1": 0.935,
+    "absolute_difference": 0.0003858353346323229,
+    "hits": {
+      "S": 20,
+      "C": 20
+    },
+    "budget_sha256": "d2061c4394553b6e229555a4760296811bf82db6595b7a6d755371b0be94465c",
+    "unique_distances": {
+      "S": {
+        "wbm-1-36714": -0.31012,
+        "wbm-1-38115": -0.347437
+      },
+      "C": {
+        "wbm-2-35012": -0.30364,
+        "wbm-3-52495": -0.309271
+      }
+    }
+  },
+  "field_comparison": {
+    "basis": "旧件备份与本次归档按 JSON 叶字段比较；数字差=新−旧，另列绝对差；非数字不定义差值。",
+    "byte_equal": true,
+    "fields": [
+      {
+        "field": "/absolute_difference",
+        "status": "一致",
+        "old_present": true,
+        "new_present": true,
+        "old": 0.0003858353346323229,
+        "new": 0.0003858353346323229,
+        "delta_new_minus_old": 0.0,
+        "absolute_delta": 0.0
+      },
+      {
+        "field": "/budget_sha256",
+        "status": "一致",
+        "old_present": true,
+        "new_present": true,
+        "old": "d2061c4394553b6e229555a4760296811bf82db6595b7a6d755371b0be94465c",
+        "new": "d2061c4394553b6e229555a4760296811bf82db6595b7a6d755371b0be94465c",
+        "delta_new_minus_old": null,
+        "absolute_delta": null
+      },
+      {
+        "field": "/card_f1",
+        "status": "一致",
+        "old_present": true,
+        "new_present": true,
+        "old": 0.935,
+        "new": 0.935,
+        "delta_new_minus_old": 0.0,
+        "absolute_delta": 0.0
+      },
+      {
+        "field": "/f1",
+        "status": "一致",
+        "old_present": true,
+        "new_present": true,
+        "old": 0.9346141646653677,
+        "new": 0.9346141646653677,
+        "delta_new_minus_old": 0.0,
+        "absolute_delta": 0.0
+      },
+      {
+        "field": "/fn",
+        "status": "一致",
+        "old_present": true,
+        "new_present": true,
+        "old": 2003,
+        "new": 2003,
+        "delta_new_minus_old": 0,
+        "absolute_delta": 0
+      },
+      {
+        "field": "/fp",
+        "status": "一致",
+        "old_present": true,
+        "new_present": true,
+        "old": 2326,
+        "new": 2326,
+        "delta_new_minus_old": 0,
+        "absolute_delta": 0
+      },
+      {
+        "field": "/hits/C",
+        "status": "一致",
+        "old_present": true,
+        "new_present": true,
+        "old": 20,
+        "new": 20,
+        "delta_new_minus_old": 0,
+        "absolute_delta": 0
+      },
+      {
+        "field": "/hits/S",
+        "status": "一致",
+        "old_present": true,
+        "new_present": true,
+        "old": 20,
+        "new": 20,
+        "delta_new_minus_old": 0,
+        "absolute_delta": 0
+      },
+      {
+        "field": "/n",
+        "status": "一致",
+        "old_present": true,
+        "new_present": true,
+        "old": 215488,
+        "new": 215488,
+        "delta_new_minus_old": 0,
+        "absolute_delta": 0
+      },
+      {
+        "field": "/tn",
+        "status": "一致",
+        "old_present": true,
+        "new_present": true,
+        "old": 180220,
+        "new": 180220,
+        "delta_new_minus_old": 0,
+        "absolute_delta": 0
+      },
+      {
+        "field": "/tp",
+        "status": "一致",
+        "old_present": true,
+        "new_present": true,
+        "old": 30939,
+        "new": 30939,
+        "delta_new_minus_old": 0,
+        "absolute_delta": 0
+      },
+      {
+        "field": "/unique_distances/C/wbm-2-35012",
+        "status": "一致",
+        "old_present": true,
+        "new_present": true,
+        "old": -0.30364,
+        "new": -0.30364,
+        "delta_new_minus_old": 0.0,
+        "absolute_delta": 0.0
+      },
+      {
+        "field": "/unique_distances/C/wbm-3-52495",
+        "status": "一致",
+        "old_present": true,
+        "new_present": true,
+        "old": -0.309271,
+        "new": -0.309271,
+        "delta_new_minus_old": 0.0,
+        "absolute_delta": 0.0
+      },
+      {
+        "field": "/unique_distances/S/wbm-1-36714",
+        "status": "一致",
+        "old_present": true,
+        "new_present": true,
+        "old": -0.31012,
+        "new": -0.31012,
+        "delta_new_minus_old": 0.0,
+        "absolute_delta": 0.0
+      },
+      {
+        "field": "/unique_distances/S/wbm-1-38115",
+        "status": "一致",
+        "old_present": true,
+        "new_present": true,
+        "old": -0.347437,
+        "new": -0.347437,
+        "delta_new_minus_old": 0.0,
+        "absolute_delta": 0.0
+      }
+    ],
+    "field_count": 15,
+    "consistent_count": 15,
+    "different_count": 0
+  },
+  "raw_inputs": {
+    "wbm": {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\64706751.gz",
+      "bytes": 12745623,
+      "sha256": "adbdd8b24086d4888195d8894c77f6d5fb29ce33bbb5d7d3898b4d79e964dc54"
+    },
+    "champion_selected": {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\恢复第三阶段揭晓与冠军F1核算-hpp5x5x4\\node_1_e9c693bf-f122-4e0e-9861-8a07ae436c79\\第1轮-6af91d6b\\scratch\\raw\\70836372.gz",
+      "bytes": 1315880,
+      "sha256": "4767371b15c5169106f352e15aa13b0859e83a0f047e17cc822ff3dde42328eb"
+    },
+    "champion_copies": [
+      {
+        "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\恢复第三阶段揭晓与冠军F1核算-hpp5x5x4\\node_1_e9c693bf-f122-4e0e-9861-8a07ae436c79\\第1轮-6af91d6b\\scratch\\raw\\70836372.gz",
+        "bytes": 1315880,
+        "sha256": "4767371b15c5169106f352e15aa13b0859e83a0f047e17cc822ff3dde42328eb"
+      },
+      {
+        "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\自动执行缺少文件的联网检索计划-pv2slx1f\\node_1_e9c693bf-f122-4e0e-9861-8a07ae436c79\\第1轮-0c58e160\\scratch\\70836372.gz",
+        "bytes": 1315880,
+        "sha256": "4767371b15c5169106f352e15aa13b0859e83a0f047e17cc822ff3dde42328eb"
+      }
+    ],
+    "row_counts": {
+      "pred": 256963,
+      "wbm": 256963
+    },
+    "wbm_header": [
+      "material_id",
+      "formula",
+      "n_sites",
+      "volume",
+      "uncorrected_energy",
+      "e_form_per_atom_wbm",
+      "e_above_hull_wbm",
+      "bandgap_pbe",
+      "protostructure_spglib_initial_structure",
+      "uncorrected_energy_from_cse",
+      "e_correction_per_atom_mp2020",
+      "e_correction_per_atom_mp_legacy",
+      "e_form_per_atom_uncorrected",
+      "e_form_per_atom_mp2020_corrected",
+      "e_above_hull_mp2020_corrected_ppd_mp",
+      "site_stats_fingerprint_init_final_norm_diff",
+      "protostructure_spglib",
+      "unique_prototype"
+    ],
+    "champion_header": [
+      "material_id",
+      "e_form_per_atom"
+    ]
+  },
+  "freeze": {
+    "receipt": {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\恢复第三阶段揭晓与冠军F1核算-hpp5x5x4\\node_1_e9c693bf-f122-4e0e-9861-8a07ae436c79\\第1轮-6af91d6b\\shared_canonical_check\\frozen_stage2\\freeze.json",
+      "bytes": 4348,
+      "sha256": "06a52898931c4704f2b90f5274dcfd5d61d9d02d4fc95b620402dfc7fb5d7347"
+    },
+    "run_id": "RUN-20261121-STAGE2-01",
+    "declared_count": 14,
+    "declared_fingerprint": "ec146b39eba2d2281761c47cc36a2b6345b3a7cfc6e41af581401915c4b4375f",
+    "recomputed_fingerprint": "ec146b39eba2d2281761c47cc36a2b6345b3a7cfc6e41af581401915c4b4375f",
+    "verified_files": [
+      {
+        "declared_path": "shared/stage2_run/budget_lists_7tier.json",
+        "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\有限预算下S与C命中对比-l8dpcu47\\node_3_7f0af346-b198-4858-9cbf-78e026eb3d88\\第1轮-47d95033\\stage2_run\\budget_lists_7tier.json",
+        "bytes": 162895,
+        "sha256": "d2061c4394553b6e229555a4760296811bf82db6595b7a6d755371b0be94465c"
+      },
+      {
+        "declared_path": "shared/stage2_run/full_ranking_S.csv",
+        "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\有限预算下S与C命中对比-l8dpcu47\\node_3_7f0af346-b198-4858-9cbf-78e026eb3d88\\第1轮-47d95033\\runs\\2026-11-21_stage2_formal\\out\\full_ranking_S.csv",
+        "bytes": 2755365,
+        "sha256": "0672bfad399c444ff04cc98ba12a4053df06b6c428d56ef8e370d6f2009d27da"
+      },
+      {
+        "declared_path": "shared/stage2_run/full_ranking_C.csv",
+        "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\有限预算下S与C命中对比-l8dpcu47\\node_3_7f0af346-b198-4858-9cbf-78e026eb3d88\\第1轮-47d95033\\runs\\2026-11-21_stage2_formal\\out\\full_ranking_C.csv",
+        "bytes": 2757209,
+        "sha256": "ef1d523992980f8159c06b06116029329e33393adbe782da07ca71e2bd1b7c16"
+      },
+      {
+        "declared_path": "shared/stage2_run/signoff_S.md",
+        "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\有限预算下S与C命中对比-l8dpcu47\\node_3_7f0af346-b198-4858-9cbf-78e026eb3d88\\第1轮-47d95033\\stage2_run\\signoff_S.md",
+        "bytes": 6317,
+        "sha256": "5a348e7b2858c420a0a4f1255476ab1495b475ddcb4095428097dc359bc4b621"
+      },
+      {
+        "declared_path": "shared/stage2_run/signoff_C.md",
+        "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\有限预算下S与C命中对比-l8dpcu47\\node_4_aa43c837-a5a2-4688-9288-1e6938cce1c5\\第1轮-47d95033\\stage2_run\\signoff_C.md",
+        "bytes": 4373,
+        "sha256": "f89f8f811bfe353ef74385ab9a6a2a804b8d90ab66e70dcc90aca89056610a8e"
+      }
+    ],
+    "scope": "验回执总指纹，并针对本次使用的名单、全排序和签认逐件核哈希；非全量文件复核。"
+  },
+  "f1_check": {
+    "model": "dpa-4.1-max-oam-pft",
+    "universe": "所有化学体系，unique_prototype=True，按照 material_id 对齐",
+    "dft_reference_formula": "e_form_per_atom_mp2020_corrected − e_above_hull_mp2020_corrected_ppd_mp",
+    "predicted_distance_formula": "冠军预测形成能 − DFT参考凸包能量",
+    "f1_formula": "2*TP/(2*TP+FP+FN)",
+    "threshold": 0.02,
+    "threshold_comparison": "absolute_difference <= 0.02",
+    "status_basis": "原脚本的退出码及本次归档结果",
+    "n": 215488,
+    "f1": 0.9346141646653677,
+    "card_f1": 0.935,
+    "absolute_difference": 0.0003858353346323229,
+    "passed": true,
+    "independent_recalculation": {
+      "n": 215488,
+      "unique_prototypes": 215488,
+      "nonfinite_or_missing": 0,
+      "tp": 30939,
+      "fp": 2326,
+      "tn": 180220,
+      "fn": 2003,
+      "f1": 0.9346141646653677,
+      "card_f1": 0.935,
+      "absolute_difference": 0.0003858353346323229
+    },
+    "matches_run_by_field": {
+      "n": true,
+      "tp": true,
+      "fp": true,
+      "tn": true,
+      "fn": true,
+      "f1": true,
+      "card_f1": true,
+      "absolute_difference": true
+    },
+    "conclusion_status": "方向一脚本复算通过，待另一位真人队员独立复核",
+    "errors": []
+  },
+  "top20": {
+    "rule": "按 material_id 连接原始 WBM；有限 DFT MP2020 corrected PPD MP 凸包距离 ≤0 eV/atom 计命中；保持冻结名单顺序。",
+    "summary": {
+      "S": {
+        "size": 20,
+        "hits": 20,
+        "unknown": 0,
+        "only_ids": [
+          "wbm-1-38115",
+          "wbm-1-36714"
+        ],
+        "only_hits": 2
+      },
+      "C": {
+        "size": 20,
+        "hits": 20,
+        "unknown": 0,
+        "only_ids": [
+          "wbm-3-52495",
+          "wbm-2-35012"
+        ],
+        "only_hits": 2
+      }
+    },
+    "rows": {
+      "S": [
+        {
+          "rank": 1,
+          "material_id": "wbm-3-56891",
+          "formula": "F4 O4 Pa4",
+          "predicted_score_eV_per_atom": "-1.5040490000000006",
+          "dft_hull_distance_eV_per_atom": "-1.512202",
+          "is_hit": true
+        },
+        {
+          "rank": 2,
+          "material_id": "wbm-2-37232",
+          "formula": "Gd2 I2 O2",
+          "predicted_score_eV_per_atom": "-0.49428800000000006",
+          "dft_hull_distance_eV_per_atom": "-0.491374",
+          "is_hit": true
+        },
+        {
+          "rank": 3,
+          "material_id": "wbm-1-44497",
+          "formula": "O1 P2 Yb4",
+          "predicted_score_eV_per_atom": "-0.43582300000000007",
+          "dft_hull_distance_eV_per_atom": "-0.438474",
+          "is_hit": true
+        },
+        {
+          "rank": 4,
+          "material_id": "wbm-2-37233",
+          "formula": "Gd2 I2 O2",
+          "predicted_score_eV_per_atom": "-0.4206880000000002",
+          "dft_hull_distance_eV_per_atom": "-0.418737",
+          "is_hit": true
+        },
+        {
+          "rank": 5,
+          "material_id": "wbm-3-52496",
+          "formula": "O4 Pa1 Sr1",
+          "predicted_score_eV_per_atom": "-0.39928799999999987",
+          "dft_hull_distance_eV_per_atom": "-0.404764",
+          "is_hit": true
+        },
+        {
+          "rank": 6,
+          "material_id": "wbm-2-36457",
+          "formula": "O7 P2 Yb2",
+          "predicted_score_eV_per_atom": "-0.3803209999999999",
+          "dft_hull_distance_eV_per_atom": "-0.383428",
+          "is_hit": true
+        },
+        {
+          "rank": 7,
+          "material_id": "wbm-1-38113",
+          "formula": "As8 O24 Rb8",
+          "predicted_score_eV_per_atom": "-0.369478",
+          "dft_hull_distance_eV_per_atom": "-0.37005",
+          "is_hit": true
+        },
+        {
+          "rank": 8,
+          "material_id": "wbm-3-51794",
+          "formula": "Ca1 O4 Pa1",
+          "predicted_score_eV_per_atom": "-0.36599499999999985",
+          "dft_hull_distance_eV_per_atom": "-0.366256",
+          "is_hit": true
+        },
+        {
+          "rank": 9,
+          "material_id": "wbm-1-38114",
+          "formula": "As4 O12 Rb4",
+          "predicted_score_eV_per_atom": "-0.36077899999999996",
+          "dft_hull_distance_eV_per_atom": "-0.361248",
+          "is_hit": true
+        },
+        {
+          "rank": 10,
+          "material_id": "wbm-1-38112",
+          "formula": "As4 O12 Rb4",
+          "predicted_score_eV_per_atom": "-0.3563780000000001",
+          "dft_hull_distance_eV_per_atom": "-0.356587",
+          "is_hit": true
+        },
+        {
+          "rank": 11,
+          "material_id": "wbm-2-35085",
+          "formula": "O4 Pu1 Yb1",
+          "predicted_score_eV_per_atom": "-0.3524770000000004",
+          "dft_hull_distance_eV_per_atom": "-0.349978",
+          "is_hit": true
+        },
+        {
+          "rank": 12,
+          "material_id": "wbm-3-51751",
+          "formula": "Ba1 O4 Pa1",
+          "predicted_score_eV_per_atom": "-0.3494229999999998",
+          "dft_hull_distance_eV_per_atom": "-0.366142",
+          "is_hit": true
+        },
+        {
+          "rank": 13,
+          "material_id": "wbm-1-38115",
+          "formula": "As2 O6 Rb2",
+          "predicted_score_eV_per_atom": "-0.342778",
+          "dft_hull_distance_eV_per_atom": "-0.347437",
+          "is_hit": true
+        },
+        {
+          "rank": 14,
+          "material_id": "wbm-4-25523",
+          "formula": "Ir1 O4 Rb3",
+          "predicted_score_eV_per_atom": "-0.3374929999999998",
+          "dft_hull_distance_eV_per_atom": "-0.339171",
+          "is_hit": true
+        },
+        {
+          "rank": 15,
+          "material_id": "wbm-1-41362",
+          "formula": "O8 S2 Yb2",
+          "predicted_score_eV_per_atom": "-0.3341080000000005",
+          "dft_hull_distance_eV_per_atom": "-0.336638",
+          "is_hit": true
+        },
+        {
+          "rank": 16,
+          "material_id": "wbm-2-35084",
+          "formula": "Np1 O4 Yb1",
+          "predicted_score_eV_per_atom": "-0.326527",
+          "dft_hull_distance_eV_per_atom": "-0.333282",
+          "is_hit": true
+        },
+        {
+          "rank": 17,
+          "material_id": "wbm-1-40397",
+          "formula": "Ca1 O4 Pu1",
+          "predicted_score_eV_per_atom": "-0.3193900000000003",
+          "dft_hull_distance_eV_per_atom": "-0.312727",
+          "is_hit": true
+        },
+        {
+          "rank": 18,
+          "material_id": "wbm-4-26594",
+          "formula": "Ba2 Fe1 O6 Pa1",
+          "predicted_score_eV_per_atom": "-0.3097920000000003",
+          "dft_hull_distance_eV_per_atom": "-0.008852",
+          "is_hit": true
+        },
+        {
+          "rank": 19,
+          "material_id": "wbm-1-37590",
+          "formula": "O4 Pt2 Rb2",
+          "predicted_score_eV_per_atom": "-0.3084380000000002",
+          "dft_hull_distance_eV_per_atom": "-0.309811",
+          "is_hit": true
+        },
+        {
+          "rank": 20,
+          "material_id": "wbm-1-36714",
+          "formula": "Cs2 O4 Pt2",
+          "predicted_score_eV_per_atom": "-0.30702799999999986",
+          "dft_hull_distance_eV_per_atom": "-0.31012",
+          "is_hit": true
+        }
+      ],
+      "C": [
+        {
+          "rank": 1,
+          "material_id": "wbm-3-56891",
+          "formula": "F4 O4 Pa4",
+          "predicted_score_eV_per_atom": "-1.5042490000000006",
+          "dft_hull_distance_eV_per_atom": "-1.512202",
+          "is_hit": true
+        },
+        {
+          "rank": 2,
+          "material_id": "wbm-2-37232",
+          "formula": "Gd2 I2 O2",
+          "predicted_score_eV_per_atom": "-0.4910880000000004",
+          "dft_hull_distance_eV_per_atom": "-0.491374",
+          "is_hit": true
+        },
+        {
+          "rank": 3,
+          "material_id": "wbm-1-44497",
+          "formula": "O1 P2 Yb4",
+          "predicted_score_eV_per_atom": "-0.43308953510238046",
+          "dft_hull_distance_eV_per_atom": "-0.438474",
+          "is_hit": true
+        },
+        {
+          "rank": 4,
+          "material_id": "wbm-2-37233",
+          "formula": "Gd2 I2 O2",
+          "predicted_score_eV_per_atom": "-0.4190532140000003",
+          "dft_hull_distance_eV_per_atom": "-0.418737",
+          "is_hit": true
+        },
+        {
+          "rank": 5,
+          "material_id": "wbm-3-52496",
+          "formula": "O4 Pa1 Sr1",
+          "predicted_score_eV_per_atom": "-0.4019879999999998",
+          "dft_hull_distance_eV_per_atom": "-0.404764",
+          "is_hit": true
+        },
+        {
+          "rank": 6,
+          "material_id": "wbm-2-36457",
+          "formula": "O7 P2 Yb2",
+          "predicted_score_eV_per_atom": "-0.383321",
+          "dft_hull_distance_eV_per_atom": "-0.383428",
+          "is_hit": true
+        },
+        {
+          "rank": 7,
+          "material_id": "wbm-3-51794",
+          "formula": "Ca1 O4 Pa1",
+          "predicted_score_eV_per_atom": "-0.3700454475999999",
+          "dft_hull_distance_eV_per_atom": "-0.366256",
+          "is_hit": true
+        },
+        {
+          "rank": 8,
+          "material_id": "wbm-1-38113",
+          "formula": "As8 O24 Rb8",
+          "predicted_score_eV_per_atom": "-0.369478",
+          "dft_hull_distance_eV_per_atom": "-0.37005",
+          "is_hit": true
+        },
+        {
+          "rank": 9,
+          "material_id": "wbm-1-38114",
+          "formula": "As4 O12 Rb4",
+          "predicted_score_eV_per_atom": "-0.36096067750000005",
+          "dft_hull_distance_eV_per_atom": "-0.361248",
+          "is_hit": true
+        },
+        {
+          "rank": 10,
+          "material_id": "wbm-1-38112",
+          "formula": "As4 O12 Rb4",
+          "predicted_score_eV_per_atom": "-0.3563780000000001",
+          "dft_hull_distance_eV_per_atom": "-0.356587",
+          "is_hit": true
+        },
+        {
+          "rank": 11,
+          "material_id": "wbm-3-51751",
+          "formula": "Ba1 O4 Pa1",
+          "predicted_score_eV_per_atom": "-0.35402299999999975",
+          "dft_hull_distance_eV_per_atom": "-0.366142",
+          "is_hit": true
+        },
+        {
+          "rank": 12,
+          "material_id": "wbm-2-35085",
+          "formula": "O4 Pu1 Yb1",
+          "predicted_score_eV_per_atom": "-0.35057700000000036",
+          "dft_hull_distance_eV_per_atom": "-0.349978",
+          "is_hit": true
+        },
+        {
+          "rank": 13,
+          "material_id": "wbm-4-25523",
+          "formula": "Ir1 O4 Rb3",
+          "predicted_score_eV_per_atom": "-0.33799299999999977",
+          "dft_hull_distance_eV_per_atom": "-0.339171",
+          "is_hit": true
+        },
+        {
+          "rank": 14,
+          "material_id": "wbm-1-41362",
+          "formula": "O8 S2 Yb2",
+          "predicted_score_eV_per_atom": "-0.3374032427291671",
+          "dft_hull_distance_eV_per_atom": "-0.336638",
+          "is_hit": true
+        },
+        {
+          "rank": 15,
+          "material_id": "wbm-2-35084",
+          "formula": "Np1 O4 Yb1",
+          "predicted_score_eV_per_atom": "-0.3338269999999999",
+          "dft_hull_distance_eV_per_atom": "-0.333282",
+          "is_hit": true
+        },
+        {
+          "rank": 16,
+          "material_id": "wbm-1-40397",
+          "formula": "Ca1 O4 Pu1",
+          "predicted_score_eV_per_atom": "-0.31399",
+          "dft_hull_distance_eV_per_atom": "-0.312727",
+          "is_hit": true
+        },
+        {
+          "rank": 17,
+          "material_id": "wbm-4-26594",
+          "formula": "Ba2 Fe1 O6 Pa1",
+          "predicted_score_eV_per_atom": "-0.30779200000000007",
+          "dft_hull_distance_eV_per_atom": "-0.008852",
+          "is_hit": true
+        },
+        {
+          "rank": 18,
+          "material_id": "wbm-1-37590",
+          "formula": "O4 Pt2 Rb2",
+          "predicted_score_eV_per_atom": "-0.3067380000000002",
+          "dft_hull_distance_eV_per_atom": "-0.309811",
+          "is_hit": true
+        },
+        {
+          "rank": 19,
+          "material_id": "wbm-3-52495",
+          "formula": "Np1 O4 Sr1",
+          "predicted_score_eV_per_atom": "-0.3066035413999999",
+          "dft_hull_distance_eV_per_atom": "-0.309271",
+          "is_hit": true
+        },
+        {
+          "rank": 20,
+          "material_id": "wbm-2-35012",
+          "formula": "Np1 O4 Sr1",
+          "predicted_score_eV_per_atom": "-0.305612084369443",
+          "dft_hull_distance_eV_per_atom": "-0.30364",
+          "is_hit": true
+        }
+      ]
+    },
+    "divergence_rows": [
+      {
+        "material_id": "wbm-1-38115",
+        "formula": "As2 O6 Rb2",
+        "rank_S": 13,
+        "rank_C": 30,
+        "score_S": "-0.342778",
+        "score_C": "-0.27787433422851526",
+        "dft_hull_distance_eV_per_atom": "-0.347437",
+        "is_hit": true,
+        "only": "S"
+      },
+      {
+        "material_id": "wbm-1-36714",
+        "formula": "Cs2 O4 Pt2",
+        "rank_S": 20,
+        "rank_C": 21,
+        "score_S": "-0.30702799999999986",
+        "score_C": "-0.3036279999999998",
+        "dft_hull_distance_eV_per_atom": "-0.31012",
+        "is_hit": true,
+        "only": "S"
+      },
+      {
+        "material_id": "wbm-3-52495",
+        "formula": "Np1 O4 Sr1",
+        "rank_S": 21,
+        "rank_C": 19,
+        "score_S": "-0.3070140000000001",
+        "score_C": "-0.3066035413999999",
+        "dft_hull_distance_eV_per_atom": "-0.309271",
+        "is_hit": true,
+        "only": "C"
+      },
+      {
+        "material_id": "wbm-2-35012",
+        "formula": "Np1 O4 Sr1",
+        "rank_S": 23,
+        "rank_C": 20,
+        "score_S": "-0.303315",
+        "score_C": "-0.305612084369443",
+        "dft_hull_distance_eV_per_atom": "-0.30364",
+        "is_hit": true,
+        "only": "C"
+      }
+    ],
+    "identity": {
+      "expression": "C 总命中 − S 总命中 = 仅 C 命中 − 仅 S 命中",
+      "left": 0,
+      "right": 0,
+      "verified": true,
+      "shared_count": 18,
+      "shared_hits": 18
+    }
+  },
+  "root_csv_crosscheck": {
+    "source": {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\方向1_前20独有候选.csv",
+      "bytes": 375,
+      "sha256": "e9afff24cc0fffd05c6a54f766126366a034640f6e06cb21308206e192c7f2b5"
+    },
+    "material_ids_match": true,
+    "checked_rows": [
+      {
+        "material_id": "wbm-1-38115",
+        "fields": {
+          "formula": {
+            "root_csv": "As2 O6 Rb2",
+            "recomputed": "As2 O6 Rb2",
+            "match": true
+          },
+          "rank_S": {
+            "root_csv": "13",
+            "recomputed": 13,
+            "match": true
+          },
+          "rank_C": {
+            "root_csv": "30",
+            "recomputed": 30,
+            "match": true
+          },
+          "score_S": {
+            "root_csv": "-0.342778",
+            "recomputed": "-0.342778",
+            "match": true,
+            "absolute_delta_eV_per_atom": "0.000000"
+          },
+          "score_C": {
+            "root_csv": "-0.27787433422851526",
+            "recomputed": "-0.27787433422851526",
+            "match": true,
+            "absolute_delta_eV_per_atom": "0E-17"
+          }
+        }
+      },
+      {
+        "material_id": "wbm-1-36714",
+        "fields": {
+          "formula": {
+            "root_csv": "Cs2 O4 Pt2",
+            "recomputed": "Cs2 O4 Pt2",
+            "match": true
+          },
+          "rank_S": {
+            "root_csv": "20",
+            "recomputed": 20,
+            "match": true
+          },
+          "rank_C": {
+            "root_csv": "21",
+            "recomputed": 21,
+            "match": true
+          },
+          "score_S": {
+            "root_csv": "-0.30702799999999986",
+            "recomputed": "-0.30702799999999986",
+            "match": true,
+            "absolute_delta_eV_per_atom": "0E-17"
+          },
+          "score_C": {
+            "root_csv": "-0.3036279999999998",
+            "recomputed": "-0.3036279999999998",
+            "match": true,
+            "absolute_delta_eV_per_atom": "0E-16"
+          }
+        }
+      },
+      {
+        "material_id": "wbm-3-52495",
+        "fields": {
+          "formula": {
+            "root_csv": "Np1 O4 Sr1",
+            "recomputed": "Np1 O4 Sr1",
+            "match": true
+          },
+          "rank_S": {
+            "root_csv": "21",
+            "recomputed": 21,
+            "match": true
+          },
+          "rank_C": {
+            "root_csv": "19",
+            "recomputed": 19,
+            "match": true
+          },
+          "score_S": {
+            "root_csv": "-0.3070140000000001",
+            "recomputed": "-0.3070140000000001",
+            "match": true,
+            "absolute_delta_eV_per_atom": "0E-16"
+          },
+          "score_C": {
+            "root_csv": "-0.3066035413999999",
+            "recomputed": "-0.3066035413999999",
+            "match": true,
+            "absolute_delta_eV_per_atom": "0E-16"
+          }
+        }
+      },
+      {
+        "material_id": "wbm-2-35012",
+        "fields": {
+          "formula": {
+            "root_csv": "Np1 O4 Sr1",
+            "recomputed": "Np1 O4 Sr1",
+            "match": true
+          },
+          "rank_S": {
+            "root_csv": "23",
+            "recomputed": 23,
+            "match": true
+          },
+          "rank_C": {
+            "root_csv": "20",
+            "recomputed": 20,
+            "match": true
+          },
+          "score_S": {
+            "root_csv": "-0.303315",
+            "recomputed": "-0.303315",
+            "match": true,
+            "absolute_delta_eV_per_atom": "0.000000"
+          },
+          "score_C": {
+            "root_csv": "-0.305612084369443",
+            "recomputed": "-0.305612084369443",
+            "match": true,
+            "absolute_delta_eV_per_atom": "0E-15"
+          }
+        }
+      }
+    ],
+    "all_field_values_match": true,
+    "scope": "根目录 CSV 无 DFT 距离或命中列，故只核对 ID、式、名次与分数。"
+  },
+  "preservation": [
+    {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\第三阶段本地修订\\核验结果.json",
+      "bytes": 513,
+      "sha256": "07babb5c1feb5133145ee36dac47c88d9e4d4518f21cbe7a5bfd22780ebe65e8",
+      "sha256_after": "07babb5c1feb5133145ee36dac47c88d9e4d4518f21cbe7a5bfd22780ebe65e8",
+      "unchanged": true
+    },
+    {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\第三阶段本地修订\\recheck.py",
+      "bytes": 2826,
+      "sha256": "b23b4f75de8c15a1e372aee06e8b8a048256fb312a52ba90c48bb272b4cf17a6",
+      "sha256_after": "b23b4f75de8c15a1e372aee06e8b8a048256fb312a52ba90c48bb272b4cf17a6",
+      "unchanged": true
+    },
+    {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\方向1_前20独有候选.csv",
+      "bytes": 375,
+      "sha256": "e9afff24cc0fffd05c6a54f766126366a034640f6e06cb21308206e192c7f2b5",
+      "sha256_after": "e9afff24cc0fffd05c6a54f766126366a034640f6e06cb21308206e192c7f2b5",
+      "unchanged": true
+    },
+    {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\64706751.gz",
+      "bytes": 12745623,
+      "sha256": "adbdd8b24086d4888195d8894c77f6d5fb29ce33bbb5d7d3898b4d79e964dc54",
+      "sha256_after": "adbdd8b24086d4888195d8894c77f6d5fb29ce33bbb5d7d3898b4d79e964dc54",
+      "unchanged": true
+    },
+    {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\恢复第三阶段揭晓与冠军F1核算-hpp5x5x4\\node_1_e9c693bf-f122-4e0e-9861-8a07ae436c79\\第1轮-6af91d6b\\scratch\\raw\\70836372.gz",
+      "bytes": 1315880,
+      "sha256": "4767371b15c5169106f352e15aa13b0859e83a0f047e17cc822ff3dde42328eb",
+      "sha256_after": "4767371b15c5169106f352e15aa13b0859e83a0f047e17cc822ff3dde42328eb",
+      "unchanged": true
+    },
+    {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\自动执行缺少文件的联网检索计划-pv2slx1f\\node_1_e9c693bf-f122-4e0e-9861-8a07ae436c79\\第1轮-0c58e160\\scratch\\70836372.gz",
+      "bytes": 1315880,
+      "sha256": "4767371b15c5169106f352e15aa13b0859e83a0f047e17cc822ff3dde42328eb",
+      "sha256_after": "4767371b15c5169106f352e15aa13b0859e83a0f047e17cc822ff3dde42328eb",
+      "unchanged": true
+    },
+    {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\有限预算下S与C命中对比-l8dpcu47\\node_3_7f0af346-b198-4858-9cbf-78e026eb3d88\\第1轮-47d95033\\stage2_run\\budget_lists_7tier.json",
+      "bytes": 162895,
+      "sha256": "d2061c4394553b6e229555a4760296811bf82db6595b7a6d755371b0be94465c",
+      "sha256_after": "d2061c4394553b6e229555a4760296811bf82db6595b7a6d755371b0be94465c",
+      "unchanged": true
+    },
+    {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\恢复第三阶段揭晓与冠军F1核算-hpp5x5x4\\node_1_e9c693bf-f122-4e0e-9861-8a07ae436c79\\第1轮-6af91d6b\\shared_canonical_check\\frozen_stage2\\freeze.json",
+      "bytes": 4348,
+      "sha256": "06a52898931c4704f2b90f5274dcfd5d61d9d02d4fc95b620402dfc7fb5d7347",
+      "sha256_after": "06a52898931c4704f2b90f5274dcfd5d61d9d02d4fc95b620402dfc7fb5d7347",
+      "unchanged": true
+    },
+    {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\有限预算下S与C命中对比-l8dpcu47\\node_3_7f0af346-b198-4858-9cbf-78e026eb3d88\\第1轮-47d95033\\runs\\2026-11-21_stage2_formal\\out\\full_ranking_S.csv",
+      "bytes": 2755365,
+      "sha256": "0672bfad399c444ff04cc98ba12a4053df06b6c428d56ef8e370d6f2009d27da",
+      "sha256_after": "0672bfad399c444ff04cc98ba12a4053df06b6c428d56ef8e370d6f2009d27da",
+      "unchanged": true
+    },
+    {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\有限预算下S与C命中对比-l8dpcu47\\node_3_7f0af346-b198-4858-9cbf-78e026eb3d88\\第1轮-47d95033\\runs\\2026-11-21_stage2_formal\\out\\full_ranking_C.csv",
+      "bytes": 2757209,
+      "sha256": "ef1d523992980f8159c06b06116029329e33393adbe782da07ca71e2bd1b7c16",
+      "sha256_after": "ef1d523992980f8159c06b06116029329e33393adbe782da07ca71e2bd1b7c16",
+      "unchanged": true
+    },
+    {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\恢复第三阶段揭晓与冠军F1核算-hpp5x5x4\\node_5_53b3bd2f-45cd-43b3-bcfd-e3afa8ae9094\\第1轮-6af91d6b\\scratch\\stage3\\out\\hits_s_top20.csv",
+      "bytes": 1250,
+      "sha256": "4a8ab2a6aea32aaf81c095add8d1da2952ee37e1eec74ff93e0ef8d7b3f6a533",
+      "sha256_after": "4a8ab2a6aea32aaf81c095add8d1da2952ee37e1eec74ff93e0ef8d7b3f6a533",
+      "unchanged": true
+    },
+    {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\恢复第三阶段揭晓与冠军F1核算-hpp5x5x4\\node_5_53b3bd2f-45cd-43b3-bcfd-e3afa8ae9094\\第1轮-6af91d6b\\scratch\\stage3\\out\\hits_c_top20.csv",
+      "bytes": 1263,
+      "sha256": "c2a662612d277ee46f2c2a957fa4452004f5d8593a64e248143e7ee828e88422",
+      "sha256_after": "c2a662612d277ee46f2c2a957fa4452004f5d8593a64e248143e7ee828e88422",
+      "unchanged": true
+    },
+    {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\有限预算下S与C命中对比-l8dpcu47\\node_3_7f0af346-b198-4858-9cbf-78e026eb3d88\\第1轮-47d95033\\stage2_run\\signoff_S.md",
+      "bytes": 6317,
+      "sha256": "5a348e7b2858c420a0a4f1255476ab1495b475ddcb4095428097dc359bc4b621",
+      "sha256_after": "5a348e7b2858c420a0a4f1255476ab1495b475ddcb4095428097dc359bc4b621",
+      "unchanged": true
+    },
+    {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\有限预算下S与C命中对比-l8dpcu47\\node_4_aa43c837-a5a2-4688-9288-1e6938cce1c5\\第1轮-47d95033\\stage2_run\\signoff_C.md",
+      "bytes": 4373,
+      "sha256": "f89f8f811bfe353ef74385ab9a6a2a804b8d90ab66e70dcc90aca89056610a8e",
+      "sha256_after": "f89f8f811bfe353ef74385ab9a6a2a804b8d90ab66e70dcc90aca89056610a8e",
+      "unchanged": true
+    },
+    {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\有限预算下S与C命中对比-l8dpcu47\\node_5_53b3bd2f-45cd-43b3-bcfd-e3afa8ae9094\\第1轮-47d95033\\final_report.fd4fc8f4-366e1875.md",
+      "bytes": 9720,
+      "sha256": "366e18750c1944dc53b407178980198bd79fcf3418c604f607c46e9ef45ca19d",
+      "sha256_after": "366e18750c1944dc53b407178980198bd79fcf3418c604f607c46e9ef45ca19d",
+      "unchanged": true
+    },
+    {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\有限预算下S与C命中对比-l8dpcu47\\node_5_53b3bd2f-45cd-43b3-bcfd-e3afa8ae9094\\第1轮-47d95033\\final_report.fd4fc8f4-62724f65.md",
+      "bytes": 9968,
+      "sha256": "62724f65cb469ed714ce4dbdf4b1793cbf75fafff577e94c22e96939312a2986",
+      "sha256_after": "62724f65cb469ed714ce4dbdf4b1793cbf75fafff577e94c22e96939312a2986",
+      "unchanged": true
+    },
+    {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\有限预算下S与C命中对比-l8dpcu47\\node_5_53b3bd2f-45cd-43b3-bcfd-e3afa8ae9094\\第1轮-47d95033\\final_report.md",
+      "bytes": 6830,
+      "sha256": "0a6642c7c79770d7fd735e49fff64ff867389484e39d8fc0dc7bfa75a1b2a26c",
+      "sha256_after": "0a6642c7c79770d7fd735e49fff64ff867389484e39d8fc0dc7bfa75a1b2a26c",
+      "unchanged": true
+    },
+    {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\有限预算下S与C命中对比-l8dpcu47\\node_5_53b3bd2f-45cd-43b3-bcfd-e3afa8ae9094\\第1轮-47d95033\\hits_verification.0af37ce8-f752132a.json",
+      "bytes": 4134,
+      "sha256": "f752132a7c813cd187ae5ec2c3da8c6694bdd79490559d5e537a10b80d70df15",
+      "sha256_after": "f752132a7c813cd187ae5ec2c3da8c6694bdd79490559d5e537a10b80d70df15",
+      "unchanged": true
+    },
+    {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\有限预算下S与C命中对比-l8dpcu47\\node_5_53b3bd2f-45cd-43b3-bcfd-e3afa8ae9094\\第1轮-47d95033\\hits_verification.json",
+      "bytes": 2226,
+      "sha256": "2983d0970610f4d53c86b0cc717388573026a40429ba0976d29978704c4d39ae",
+      "sha256_after": "2983d0970610f4d53c86b0cc717388573026a40429ba0976d29978704c4d39ae",
+      "unchanged": true
+    },
+    {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\第三阶段本地修订\\第三阶段修订说明.md",
+      "bytes": 1282,
+      "sha256": "2339aa86e2b1762543b045235405c12803e9aa00b65d3b347960f3361bfdd943",
+      "sha256_after": "2339aa86e2b1762543b045235405c12803e9aa00b65d3b347960f3361bfdd943",
+      "unchanged": true
+    },
+    {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\有限预算下S与C命中对比-l8dpcu47\\node_5_53b3bd2f-45cd-43b3-bcfd-e3afa8ae9094\\第1轮-47d95033\\S_top20_scored.36a02be9-8d0a1aee.csv",
+      "bytes": 1259,
+      "sha256": "8d0a1aee0d2e729d80f0457950ccd874516180405daa92f78dd0f2ee4466c7fa",
+      "sha256_after": "8d0a1aee0d2e729d80f0457950ccd874516180405daa92f78dd0f2ee4466c7fa",
+      "unchanged": true
+    },
+    {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\有限预算下S与C命中对比-l8dpcu47\\node_5_53b3bd2f-45cd-43b3-bcfd-e3afa8ae9094\\第1轮-47d95033\\S_top20_scored.csv",
+      "bytes": 1285,
+      "sha256": "ee1b805ab508c1482163cc30ec6c110fe399ccec15ece735d6471af50d8a67ec",
+      "sha256_after": "ee1b805ab508c1482163cc30ec6c110fe399ccec15ece735d6471af50d8a67ec",
+      "unchanged": true
+    },
+    {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\有限预算下S与C命中对比-l8dpcu47\\node_5_53b3bd2f-45cd-43b3-bcfd-e3afa8ae9094\\第1轮-47d95033\\C_top20_scored.6676a8cd-c82e2cfe.csv",
+      "bytes": 1261,
+      "sha256": "c82e2cfe7beb2107907244d9a13a36ec6e6762c54e4f985d3977119e56548b26",
+      "sha256_after": "c82e2cfe7beb2107907244d9a13a36ec6e6762c54e4f985d3977119e56548b26",
+      "unchanged": true
+    },
+    {
+      "path": "E:\\codex\\Re0\\Mathbench Discovery\\Mira产物\\有限预算下S与C命中对比-l8dpcu47\\node_5_53b3bd2f-45cd-43b3-bcfd-e3afa8ae9094\\第1轮-47d95033\\C_top20_scored.csv",
+      "bytes": 1283,
+      "sha256": "30cee39cc44ff5a159b1f4615d8cf407d5f3272102751d97dac7cf428f90d649",
+      "sha256_after": "30cee39cc44ff5a159b1f4615d8cf407d5f3272102751d97dac7cf428f90d649",
+      "unchanged": true
+    }
+  ]
+}

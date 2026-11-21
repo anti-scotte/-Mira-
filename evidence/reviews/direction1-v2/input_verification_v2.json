@@ -1,0 +1,151 @@
+{
+  "schema": "input_verification_v2",
+  "task": "核验原始输入与旧件指纹，登记旧归档与三个 F1 数值的真实来源（stage=source）",
+  "generated_at": "2026-11-21T07:10:00+08:00",
+  "generated_by": "source 阶段核验成员（Agent Teams 运行时 ats-cfca4f8198f91fb96d4ba20d8d7b3d7e）",
+  "runtime_note": "本轮共享工作区（sessions/pxmxf8pg/shared）中不存在 shared/inputs/ 目录（ls 实测）。全部重算基于 shared/input_verification.json（declared 输入）登记的运行时规范副本路径（sessions/ats-0813076ca6b206b002a21f2f84825142/shared_canonical_check/ 与 …/inputs/input_manifest.json），逐字节 SHA-256 由本轮 hashlib 分块实算；所有计数与 F1 由本轮脚本从原始 gzip 实读重算。未向 shared/inputs/ 写入或复制任何文件，未改写任何原始输入或冻结件。",
+  "read_sources": {
+    "declared_scope_reads": [
+      "shared/input_verification.json",
+      "shared/recheck_evidence.json"
+    ],
+    "additional_reads_needed_for_provenance": [
+      "shared/final_report.md（方向一审核汇总，引用 0.26876223756379747 与 0.2047）",
+      "shared/metric_signoff.md（F1 复核签认，含登记公式与矛盾记录）",
+      "shared/independent_review.md（独立复核报告，0.20473487310597854 的原始出处）",
+      "shared/reviews/dft-label-reviewer-review-round-1.md（0.268762 登记值复核记录）"
+    ],
+    "recomputed_from_registered_canonical_copies": [
+      "/app/workspaces/7f145d1ba39a/projects/4e89314556/sessions/ats-0813076ca6b206b002a21f2f84825142/shared_canonical_check/wbm/2023-12-13-wbm-summary.csv.gz",
+      "/app/workspaces/7f145d1ba39a/projects/4e89314556/sessions/ats-0813076ca6b206b002a21f2f84825142/shared_canonical_check/champion/dpa-4.1-max-oam-pft_2026-10-27-discovery.csv.gz",
+      "/app/workspaces/7f145d1ba39a/projects/4e89314556/sessions/ats-0813076ca6b206b002a21f2f84825142/inputs/input_manifest.json",
+      "/app/workspaces/7f145d1ba39a/projects/4e89314556/sessions/ats-0813076ca6b206b002a21f2f84825142/shared_canonical_check/frozen_stage2/（6 件本地副本）"
+    ]
+  },
+  "gz_inputs": {
+    "wbm_2023_12_13_summary": {
+      "declared_shared_path": "shared/inputs/source/2023-12-13-wbm-summary.csv.gz",
+      "actual_read_path": "/app/workspaces/7f145d1ba39a/projects/4e89314556/sessions/ats-0813076ca6b206b002a21f2f84825142/shared_canonical_check/wbm/2023-12-13-wbm-summary.csv.gz",
+      "bytes": 12745623,
+      "sha256_recomputed_this_round": "adbdd8b24086d4888195d8894c77f6d5fb29ce33bbb5d7d3898b4d79e964dc54",
+      "header_fields": [
+        "material_id", "formula", "n_sites", "volume", "uncorrected_energy",
+        "e_form_per_atom_wbm", "e_above_hull_wbm", "bandgap_pbe",
+        "protostructure_spglib_initial_structure", "uncorrected_energy_from_cse",
+        "e_correction_per_atom_mp2020", "e_correction_per_atom_mp_legacy",
+        "e_form_per_atom_uncorrected", "e_form_per_atom_mp2020_corrected",
+        "e_above_hull_mp2020_corrected_ppd_mp", "site_stats_fingerprint_init_final_norm_diff",
+        "protostructure_spglib", "unique_prototype"
+      ],
+      "data_rows": 256963,
+      "unique_material_id": 256963,
+      "unique_prototype_distribution": {"True": 215488, "False": 41475, "other": 0},
+      "manifest_cross_check": "input_manifest.json /sources[0]/sha256 与 /canonical_files[0]/sha256 声明值逐字一致"
+    },
+    "champion_dpa_prediction": {
+      "declared_shared_path": "shared/inputs/source/dpa-4.1-max-oam-pft_2026-10-27-discovery.csv.gz",
+      "actual_read_path": "/app/workspaces/7f145d1ba39a/projects/4e89314556/sessions/ats-0813076ca6b206b002a21f2f84825142/shared_canonical_check/champion/dpa-4.1-max-oam-pft_2026-10-27-discovery.csv.gz",
+      "bytes": 1315880,
+      "sha256_recomputed_this_round": "4767371b15c5169106f352e15aa13b0859e83a0f047e17cc822ff3dde42328eb",
+      "header_fields": ["material_id", "e_form_per_atom"],
+      "data_rows": 256963,
+      "unique_material_id": 256963,
+      "manifest_cross_check": "input_manifest.json /sources[1]/sha256 与 /canonical_files[1]/sha256 声明值逐字一致"
+    }
+  },
+  "sample_alignment": {
+    "universe_definition": "WBM unique_prototype == True 的行，按 material_id 与冠军预测一对一对齐",
+    "unique_prototype_true_rows": 215488,
+    "unique_prototype_true_material_id_unique": 215488,
+    "duplicate_material_id_rows": 0,
+    "aligned_rows_by_material_id": 215488,
+    "aligned_missing_in_champion": 0,
+    "nonfinite_or_missing_after_alignment": 0,
+    "recomputed_by": "scratch/source_check.py（本轮，gzip+csv 逐行实读，非 pandas）"
+  },
+  "f1_value_provenance": {
+    "value_0.9346141646653677": {
+      "appears_in": "旧归档 E:\\codex\\Re0\\Mathbench Discovery\\第三阶段本地修订\\方向一复算_20261121T055153478292Z\\核验结果_本次实跑.json 字段 /f1（513 B，SHA-256 07babb5c1feb5133145ee36dac47c88d9e4d4518f21cbe7a5bfd22780ebe65e8，与旧件 核验结果.json 字节级相同；原件在 E:\\ 盘，本运行时不可达）",
+      "source_script": "E:\\codex\\Re0\\Mathbench Discovery\\第三阶段本地修订\\recheck.py（2,826 B，SHA-256 b23b4f75de8c15a1e372aee06e8b8a048256fb312a52ba90c48bb272b4cf17a6；recheck_evidence.json /execution 登记其于 2026-11-21T05:51:53Z 在隔离目录实跑，exit 0，stdout='F1=0.9346141647'，stdout.log SHA-256 a3ad255cf540bdb9f24a13ca6a76581c427435134f588a655fe32396f8a5b37c）",
+      "true_label_column": "e_above_hull_mp2020_corrected_ppd_mp（真值正类 = 该列 ≤ 0；本轮在 215,488 行 unique_prototype=True 上实数该列 ≤0 计数 = 32,942 = 旧矩阵 tp+fn）",
+      "prediction_criterion": "pred ≤ e_form_per_atom_mp2020_corrected − e_above_hull_mp2020_corrected_ppd_mp，即 pred −（形成能口径 DFT 凸包距离）≤ 0（预测正类计数 = 33,265 = 旧矩阵 tp+fp）；等价于 Matbench Discovery 模型卡口径",
+      "confusion_matrix_of_old_archive": {"tp": 30939, "fp": 2326, "tn": 180220, "fn": 2003, "n": 215488},
+      "recomputation_evidence": "本轮 scratch/criteria_probe.py 从原始 gzip 规范副本逐行重算：在候选判据集中唯一一组四格 (30939,2326,180220,2003) 逐位命中，F1=2*30939/(2*30939+2326+2003)=0.9346141646653677 与归档值逐位一致；|F1−0.935|=0.0003858353346323229 与旧件 /absolute_difference 一致",
+      "evidence_references": [
+        "shared/recheck_evidence.json /execution、/field_comparison（旧件 15 个叶字段）、/f1_check/errors",
+        "shared/final_report.md §2（备份、实跑命令与归档登记）、§3（stdout 与归档冲突登记）",
+        "shared/independent_review.md §3（0.934614 不可由登记公式复现的判定）"
+      ],
+      "provenance_caveat": "recheck.py 源码不在本运行时（E:\\ 盘未挂载；input_verification.json 登记 runtime 内检索 0 命中），故判据为本轮数据复算唯一锁定，而非读源码行得出；probe 范围为 5 个候选参考列 × 2 类预测判据 + 阈值扫描，未见第二组命中。"
+    },
+    "value_0.268762": {
+      "full_value": 0.26876223756379747,
+      "appears_in": "shared/recheck_evidence.json /f1_check/f1 与 /archived_result_data/f1；shared/final_report.md §3（方向一审核汇总）；shared/metric_signoff.md finding-1；shared/reviews/dft-label-reviewer-review-round-1.md",
+      "source_script": "运行时内无对应脚本文件：该值登记于修订轮证据 JSON（recheck_evidence.json），非脚本 stdout；recheck_evidence.json /execution 记录的实跑脚本是 recheck.py，其 stdout 输出的是 0.9346141647 而非本值",
+      "true_label_column": "e_form_per_atom_mp2020_corrected − e_above_hull_mp2020_corrected_ppd_mp（复合参考；真值正类 = 复合参考 ≤ 0，计数 213,414 = tp+fn）",
+      "prediction_criterion": "pred ≤ e_form_per_atom_mp2020_corrected − e_above_hull_mp2020_corrected_ppd_mp（与 0.934614 归档的预测侧判据相同），F1 = 2*TP/(2*TP+FP+FN)",
+      "confusion_matrix": {"tp": 33149, "fp": 116, "tn": 1958, "fn": 180265, "n": 215488},
+      "recomputation_evidence": "本轮从原始 gzip 逐行重算：四格 (33149,116,1958,180265) 逐位命中，F1=0.26876223756379747 逐位一致，|F1−0.935|=0.6662377624362026",
+      "inconsistency_registered": "recheck_evidence.json /f1_check 正文写 dft_reference_formula=原始凸包列 e_above_hull_mp2020_corrected_ppd_mp、predicted_distance=pred−hull、阈值 0（sample_rows 亦按 pred−hull 记录）；但 tp=33149 > 全体 {hull≤0} 计数 32,942，该矩阵在数学上不可能出自正文判据；按正文判据实算为 tp=32693、fp=178739、tn=3807、fn=249、F1=0.2675652892697259。矩阵仅在「e_form−hull 复合参考」判据下成立（shared/metric_signoff.md finding-1 所引公式即此）。",
+      "evidence_references": [
+        "shared/recheck_evidence.json /f1_check、/archived_result_data",
+        "shared/final_report.md §3",
+        "shared/metric_signoff.md finding-1 reason（引用公式 e_form_per_atom_mp2020_corrected − e_above_hull_mp2020_corrected_ppd_mp 与复算结果 0.268762）",
+        "shared/reviews/dft-label-reviewer-review-round-1.md（按登记矩阵与公式逐位复现 0.26876223756379747 的记录）"
+      ]
+    },
+    "value_0.2047": {
+      "full_value": 0.20473487310597854,
+      "appears_in": "shared/independent_review.md §3（原始出处，独立复核）；shared/recheck_evidence.json /previous_summary_f1.reported_approx='0.2047'；shared/final_report.md §1、§3；shared/metric_signoff.md observation-1",
+      "source_script": "复核岗自写脚本 scratch/indep_review.py 与 scratch/f1_probe.py（见 shared/independent_review.md §2：『复核脚本全部自写，未 import 上游脚本』，在复核岗任务工作目录以 python3 执行；脚本在其会话工作目录，本运行时不可直读）",
+      "true_label_column": "e_above_hull_mp2020_corrected_ppd_mp（真值正类 = 该列 ≤ 0）",
+      "prediction_criterion": "pred − e_form_per_atom_mp2020_corrected ≤ 0（预测正类），F1 = 2*TP/(2*TP+FP+FN)",
+      "confusion_matrix": {"tp": 14174, "fp": 91346, "tn": 91200, "fn": 18768, "n": 215488},
+      "recomputation_evidence": "本轮从原始 gzip 逐行重算：四格 (14174,91346,91200,18768) 逐位命中，F1=0.20473487310597854 与独立复核登记值逐位一致，|F1−0.935|=0.7302651268940215",
+      "evidence_references": [
+        "shared/independent_review.md §2（脚本与口径自述）、§3（数值与手工复核式 2·14174/(2·14174+91346+18768)）",
+        "shared/recheck_evidence.json /previous_summary_f1"
+      ],
+      "attribution_note": "recheck_evidence.json /previous_summary_f1.status 写『原参考能公式有误，已由修订复算取代』；shared/independent_review.md observation-1 指出 0.2047 恰为本轮登记公式（pred−e_form_mp2020 ≤ 0 对 hull ≤ 0）的输出，该归因与复算事实相反，登记为待修正口径冲突，本轮不据此改写结论。"
+    }
+  },
+  "frozen_stage2_check": {
+    "declared_shared_path": "shared/inputs/frozen_stage2/",
+    "actual_verified_dir": "/app/workspaces/7f145d1ba39a/projects/4e89314556/sessions/ats-0813076ca6b206b002a21f2f84825142/shared_canonical_check/frozen_stage2",
+    "local_copies_verified_this_round": [
+      {"file": "freeze.json", "bytes": 4348, "sha256": "06a52898931c4704f2b90f5274dcfd5d61d9d02d4fc95b620402dfc7fb5d7347", "matches_freeze_declaration": true},
+      {"file": "budget_lists_7tier.json", "bytes": 162895, "sha256": "d2061c4394553b6e229555a4760296811bf82db6595b7a6d755371b0be94465c", "matches_freeze_declaration": true},
+      {"file": "signoff_S.md", "bytes": 6317, "sha256": "5a348e7b2858c420a0a4f1255476ab1495b475ddcb4095428097dc359bc4b621", "matches_freeze_declaration": true},
+      {"file": "signoff_C.md", "bytes": 4373, "sha256": "f89f8f811bfe353ef74385ab9a6a2a804b8d90ab66e70dcc90aca89056610a8e", "matches_freeze_declaration": true},
+      {"file": "S_top20_scored.csv", "bytes": 1259, "sha256": "8d0a1aee0d2e729d80f0457950ccd874516180405daa92f78dd0f2ee4466c7fa", "matches_freeze_declaration": true},
+      {"file": "C_top20_signoff85f13c0c.csv", "bytes": 686, "sha256": "85f13c0c7447b3c7aa9c2de8833841f163c196304f8c2e6f42db65fe276b178a", "matches_freeze_declaration": true}
+    ],
+    "total_fingerprint": {
+      "declared": "ec146b39eba2d2281761c47cc36a2b6345b3a7cfc6e41af581401915c4b4375f",
+      "recomputed": "ec146b39eba2d2281761c47cc36a2b6345b3a7cfc6e41af581401915c4b4375f",
+      "match": true,
+      "method": "对 freeze.json 声明的 14 行 '<path> <sha256>' 排序后以换行连接做 sha256（本轮复算）"
+    },
+    "absent_declared_files": 11,
+    "absent_note": "model_manifest.json、unlabeled_candidate_pool.csv、reference_hull_energies.csv、source_and_config_manifest.md、synthetic_test_evidence.json、full_ranking_S.csv、full_ranking_C.csv、stable_sets.json、deviations.md、independent_check_C.md、diff_C_vs_archive.json 随原共享目录消失，本运行时不存在；沿用 shared/input_verification.json 登记，未虚构哈希。"
+  },
+  "originals_unchanged": {
+    "conclusion": "本轮确认所有可及原件未改写",
+    "evidence": [
+      "WBM gz SHA-256 与本轮实算 = input_verification.json 登记 = input_manifest.json 声明 = recheck_evidence.json /raw_inputs 登记逐字一致",
+      "冠军 gz SHA-256 同上三方一致",
+      "frozen_stage2 本地 6 件实算哈希与 freeze.json / manifest 声明一致，总指纹复算命中",
+      "本轮为纯只读核验，无任何写操作作用于原始输入或冻结件"
+    ]
+  },
+  "files_written_to_shared": [
+    "shared/input_verification_v2.json（本文件，唯一交付）"
+  ],
+  "no_copy_written_into_shared_inputs": true,
+  "gaps_and_limitations": [
+    "E:\\codex\\Re0\\Mathbench Discovery 未挂载：recheck.py 源码、核验结果_本次实跑.json 原件均不可读；0.9346141646653677 的判据由本轮数据复算唯一锁定（四格逐位命中），非源码行引用。",
+    "0.26876223756379747 在运行时内无脚本路径，只能登记到证据 JSON 字段与签认文档；且其矩阵与 /f1_check 正文判据存在结构性矛盾，已如实登记。",
+    "本轮共享工作区缺 shared/inputs/ 目录：两份 gzip、input_manifest.json 与冻结件均按 shared/input_verification.json 登记的规范副本路径读取（哈希与 manifest 声明一致）；若下游需要 shared/inputs/source/ 下的实体文件，须由 Lead 恢复或明确授权复制。",
+    "freeze.json 声明的 14 件中 11 件在本运行时缺失，仅 6 件本地可验（freeze.json 自身 + 5 件）。"
+  ]
+}

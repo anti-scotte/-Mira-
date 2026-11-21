@@ -1,0 +1,1599 @@
+{
+  "date": "2026-11-21",
+  "repo": "https://github.com/janosh/matbench-discovery",
+  "commit": "6d587c184cdb4a4865dc0b15b04a5e6d77ed464f",
+  "protocol": "本轮模板 §1–3；独立协议文件及签认不在授权输入范围内",
+  "unit": "eV/atom",
+  "wbm": {
+    "url": "https://figshare.com/files/64706751",
+    "path": "wbm/2023-12-13-wbm-summary.csv.gz",
+    "description": "Computed material properties only, no structures. Available properties are VASP energy, formation energy, energy above the convex hull, volume, band gap, number of sites per unit cell, and more. Exact regeneration of the MP2020-corrected formation energy and hull-distance columns depends on the `pymatgen` `MaterialsProject2020Compatibility` behavior used for anion-correction assignment; the released values are reproducible with v2023.5.10-era behavior (see https://github.com/janosh/matbench-discovery/issues/358).",
+    "md5": "1555268d3aa59d20262cb9d01ce0994b",
+    "sha256": "adbdd8b24086d4888195d8894c77f6d5fb29ce33bbb5d7d3898b4d79e964dc54",
+    "figshare_response": {
+      "file_id": "64706751",
+      "status": 200,
+      "etag": "1555268d3aa59d20262cb9d01ce0994b",
+      "length": "12745623",
+      "disposition": "attachment; filename=\"wbm/2023-12-13-wbm-summary.csv.gz\""
+    }
+  },
+  "data_dois": [
+    "10.6084/m9.figshare.22715158",
+    "10.6084/m9.figshare.28187990"
+  ],
+  "article_version_dois": null,
+  "package_versions": {
+    "pymatgen": "2025.10.7",
+    "numpy": "1.26.4",
+    "pandas": "2.2.3"
+  },
+  "counts": {
+    "wbm": 256963,
+    "unique_prototypes": 215488,
+    "oxygen_compounds": 23821,
+    "common": 23821
+  },
+  "excluded_from_oxygen_pool": {},
+  "champion": "dpa-4.1-max-oam-pft",
+  "model_columns": [
+    "dpa-4.1-max-oam-pft",
+    "dpa-4.1-max-oam",
+    "equiformer-v3-oam",
+    "tece-oam-rra-1.0",
+    "equflashv2-45m-oam",
+    "tace-oam-rra-preview",
+    "prophet-oame-mbd",
+    "esen-30m-oam",
+    "grace-3l-oam-l",
+    "pet-oam-xl-1.0.0",
+    "matris-10m-oam",
+    "dpa-4.1-air-oam",
+    "equflash-29m-oam",
+    "eqv2-m-omat-salex-mp",
+    "tace-oam-l"
+  ],
+  "models": [
+    {
+      "model_id": "dpa-4.1-max-oam-pft",
+      "model_name": "DPA-4.1-Max-OAM-PFT",
+      "family": "deepmd",
+      "model_version": null,
+      "training_sets": [
+        "MPtrj",
+        "OMat24",
+        "sAlex",
+        "MDR-MP PBE ω_q"
+      ],
+      "openness": "OSOD",
+      "card": "models/deepmd/dpa-4.1-max-oam-pft.yml",
+      "F1": 0.935,
+      "DAF": 6.089,
+      "finite": 23821,
+      "coverage": 1.0,
+      "selected": true,
+      "pred_file": {
+        "name": "models/deepmd/dpa-4.1-max-oam-pft/2026-10-27-discovery.csv.gz",
+        "url": "https://ndownloader.figshare.com/files/70836372",
+        "size": 1315880,
+        "md5": "5b512c60ef4817efcecdbb90a11bf07a"
+      },
+      "sha256": "4767371b15c5169106f352e15aa13b0859e83a0f047e17cc822ff3dde42328eb",
+      "source_col": "e_form_per_atom",
+      "nonfinite_or_absent_ids": [],
+      "order": 1,
+      "figshare_response": {
+        "file_id": "70836372",
+        "status": 200,
+        "etag": "5b512c60ef4817efcecdbb90a11bf07a",
+        "length": "1315880",
+        "disposition": "attachment; filename=\"2026-10-27-discovery.csv.gz\""
+      },
+      "compliant": false,
+      "card_sha256": "b2b3430c311e72299e0c08de2ecd078e0b0f0bc5000197e54d27c29591b57868",
+      "reason": "覆盖率达到门槛，顺序入选"
+    },
+    {
+      "model_id": "dpa-4.1-max-oam",
+      "model_name": "DPA-4.1-Max-OAM",
+      "family": "deepmd",
+      "model_version": null,
+      "training_sets": [
+        "MPtrj",
+        "OMat24",
+        "sAlex"
+      ],
+      "openness": "OSOD",
+      "card": "models/deepmd/dpa-4.1-max-oam.yml",
+      "F1": 0.933,
+      "DAF": 6.16,
+      "finite": 23821,
+      "coverage": 1.0,
+      "selected": true,
+      "pred_file": {
+        "name": "models/deepmd/dpa-4.1-max-oam/2026-10-21-discovery.csv.gz",
+        "size": 1316469,
+        "md5": "c44c675c5d14ae3f9b11da3ea1359caa",
+        "url": "https://ndownloader.figshare.com/files/70537422"
+      },
+      "sha256": "bdc582faa9097b07d4fde15c39f01bd31be80e874d4d73b1ca98eb22a2fd86d8",
+      "source_col": "e_form_per_atom",
+      "nonfinite_or_absent_ids": [],
+      "order": 2,
+      "figshare_response": {
+        "file_id": "70537422",
+        "status": 200,
+        "etag": "c44c675c5d14ae3f9b11da3ea1359caa",
+        "length": "1316469",
+        "disposition": "attachment; filename=\"2026-10-21-discovery.csv.gz\""
+      },
+      "compliant": false,
+      "card_sha256": "e4251dbb2bbe2c2efc49805a16ee30aa0a500852e282ad9d26986a77595cffc0",
+      "reason": "覆盖率达到门槛，顺序入选"
+    },
+    {
+      "model_id": "equiformer-v3-oam",
+      "model_name": "EquiformerV3+DeNS-OAM",
+      "family": "equiformer_v3",
+      "model_version": "v2026.04.07",
+      "training_sets": [
+        "MPtrj",
+        "OMat24",
+        "sAlex"
+      ],
+      "openness": "OSOD",
+      "card": "models/equiformer_v3/equiformer-v3-oam.yml",
+      "F1": 0.931,
+      "DAF": 6.074,
+      "finite": 23821,
+      "coverage": 1.0,
+      "selected": true,
+      "pred_file": {
+        "name": "models/equiformer_v3/equiformer-v3-oam/2026-04-07-discovery.csv.gz",
+        "url": "https://figshare.com/files/66646220",
+        "size": 1654051,
+        "md5": "3df9f3ce50957dfc349c678fa4926616"
+      },
+      "sha256": "f9b7990642deba60d6f9e09f315789c87fa8a649382408cf5c5c927b02423b59",
+      "source_col": "e_form_per_atom",
+      "nonfinite_or_absent_ids": [],
+      "order": 3,
+      "figshare_response": {
+        "file_id": "66646220",
+        "status": 200,
+        "etag": "3df9f3ce50957dfc349c678fa4926616",
+        "length": "1654051",
+        "disposition": "attachment; filename=\"models/equiformer_v3/equiformer-v3-oam/2026-04-07-discovery.csv.gz\""
+      },
+      "compliant": false,
+      "card_sha256": "e09d2b140db4fb658af45c00e3413e5490ea0bad74eea50886a8421e60788f4b",
+      "reason": "覆盖率达到门槛，顺序入选"
+    },
+    {
+      "model_id": "tece-oam-rra-1.0",
+      "model_name": "TECE-OAM-RRA-1.0",
+      "family": "tace",
+      "model_version": "v2026.07.05",
+      "training_sets": [
+        "MPtrj",
+        "OMat24",
+        "sAlex"
+      ],
+      "openness": "OSOD",
+      "card": "models/tace/tece-oam-rra-1.0.yml",
+      "F1": 0.929,
+      "DAF": 6.073,
+      "finite": 23821,
+      "coverage": 1.0,
+      "selected": true,
+      "pred_file": {
+        "name": "models/tace/tece-oam-rra-1.0/2026-07-05-discovery.csv.gz",
+        "url": "https://figshare.com/files/66646241",
+        "size": 1648875,
+        "md5": "3db866edbc4a6bc337c9d2abd04f5210"
+      },
+      "sha256": "a41737ad814c16af7b1f012ee9e840fda0e0b493d8b50d15b48fa4742402be58",
+      "source_col": "e_form_per_atom",
+      "nonfinite_or_absent_ids": [],
+      "order": 4,
+      "figshare_response": {
+        "file_id": "66646241",
+        "status": 200,
+        "etag": "3db866edbc4a6bc337c9d2abd04f5210",
+        "length": "1648875",
+        "disposition": "attachment; filename=\"models/tace/tece-oam-rra-1.0/2026-07-05-discovery.csv.gz\""
+      },
+      "compliant": false,
+      "card_sha256": "ca791fb629330e652b865aa75b623e62bd20dabf986bed43e782494ff4ee37fd",
+      "reason": "覆盖率达到门槛，顺序入选"
+    },
+    {
+      "model_id": "equflashv2-45m-oam",
+      "model_name": "EquFlashV2",
+      "family": "equflash",
+      "model_version": "v2026.06.11",
+      "training_sets": [
+        "MPtrj",
+        "OMat24",
+        "sAlex"
+      ],
+      "openness": "OSOD",
+      "card": "models/equflash/equflashv2-45m-oam.yml",
+      "F1": 0.929,
+      "DAF": 6.069,
+      "finite": 23821,
+      "coverage": 1.0,
+      "selected": true,
+      "pred_file": {
+        "name": "models/equflash/equflashv2-45m-oam/2026-06-11-discovery.csv.gz",
+        "url": "https://figshare.com/files/66646274",
+        "size": 2576423,
+        "md5": "7e498aabe04e32112b632219333aac44"
+      },
+      "sha256": "7d026883006b851e7bb5020faf77164dd976d43d528030c59806827698b33729",
+      "source_col": "e_form_per_atom",
+      "nonfinite_or_absent_ids": [],
+      "order": 5,
+      "figshare_response": {
+        "file_id": "66646274",
+        "status": 200,
+        "etag": "7e498aabe04e32112b632219333aac44",
+        "length": "2576423",
+        "disposition": "attachment; filename=\"models/equflash/equflashv2-45m-oam/2026-06-11-discovery.csv.gz\""
+      },
+      "compliant": false,
+      "card_sha256": "41525968f00d5513ee61e6c8b46090717945346693d92407951b0d6fc2d1088b",
+      "reason": "覆盖率达到门槛，顺序入选"
+    },
+    {
+      "model_id": "tace-oam-rra-preview",
+      "model_name": "TACE-OAM-RRA-Preview",
+      "family": "tace",
+      "model_version": "0.2.0",
+      "training_sets": [
+        "MPtrj",
+        "OMat24",
+        "sAlex"
+      ],
+      "openness": "OSOD",
+      "card": "models/tace/tace-oam-rra-preview.yml",
+      "F1": 0.928,
+      "DAF": 6.07,
+      "finite": 23821,
+      "coverage": 1.0,
+      "selected": true,
+      "pred_file": {
+        "name": "models/tace/tace-oam-rra-preview/2026-06-27-discovery.csv.gz",
+        "url": "https://figshare.com/files/66646238",
+        "size": 1648904,
+        "md5": "35baa72d394b562b890b25de4d8dcda0"
+      },
+      "sha256": "278b3567fb6f59b633d15ed31ef52f6d220d17a73c17d2c0ef80c8d14be9ef5f",
+      "source_col": "e_form_per_atom",
+      "nonfinite_or_absent_ids": [],
+      "order": 6,
+      "figshare_response": {
+        "file_id": "66646238",
+        "status": 200,
+        "etag": "35baa72d394b562b890b25de4d8dcda0",
+        "length": "1648904",
+        "disposition": "attachment; filename=\"models/tace/tace-oam-rra-preview/2026-06-27-discovery.csv.gz\""
+      },
+      "compliant": false,
+      "card_sha256": "f56fbd9a3853500c5ff0e33133e7f23128dc839505cd8574703e532dc946b389",
+      "reason": "覆盖率达到门槛，顺序入选"
+    },
+    {
+      "model_id": "prophet-oame-mbd",
+      "model_name": "Prophet-OAME-MBD",
+      "family": "prophet",
+      "model_version": "v1.0.0",
+      "training_sets": [
+        "MPtrj",
+        "OMat24",
+        "sAlex",
+        "ELEMENTA"
+      ],
+      "openness": "OSCD",
+      "card": "models/prophet/prophet-oame-mbd.yml",
+      "F1": 0.928,
+      "DAF": 6.065,
+      "finite": 23821,
+      "coverage": 1.0,
+      "selected": true,
+      "pred_file": {
+        "name": "models/prophet/prophet-oame-mbd/2026-09-03-discovery.csv.gz",
+        "size": 3093641,
+        "md5": "d0c5052a8911f4386305af963900ae86",
+        "url": "https://figshare.com/files/68516800"
+      },
+      "sha256": "ffd882d49e349cb6191606465a6c3b902b15b003632b29bc0a69532b70212f6b",
+      "source_col": "e_form_per_atom",
+      "nonfinite_or_absent_ids": [],
+      "order": 7,
+      "figshare_response": {
+        "file_id": "68516800",
+        "status": 200,
+        "etag": "d0c5052a8911f4386305af963900ae86",
+        "length": "3093641",
+        "disposition": "attachment; filename=\"models/prophet/prophet-oame-mbd/2026-09-03-discovery.csv.gz\""
+      },
+      "compliant": false,
+      "card_sha256": "0bf38bf96fbc2b75d850aa2dd2b9253f68f15741dc1849a5315d5b242bcaff0b",
+      "reason": "覆盖率达到门槛，顺序入选"
+    },
+    {
+      "model_id": "esen-30m-oam",
+      "model_name": "eSEN-30M-OAM",
+      "family": "esen",
+      "model_version": "fairchem_core-1.10.0",
+      "training_sets": [
+        "MPtrj",
+        "OMat24",
+        "sAlex"
+      ],
+      "openness": "OSOD",
+      "card": "models/esen/esen-30m-oam.yml",
+      "F1": 0.925,
+      "DAF": 6.069,
+      "finite": 23821,
+      "coverage": 1.0,
+      "selected": true,
+      "pred_file": {
+        "name": "models/esen/esen-30m-oam/2025-03-17-discovery.csv.gz",
+        "url": "https://figshare.com/files/66646340",
+        "size": 1318830,
+        "md5": "9b58f65f581aa6785e48e693d3ee842d"
+      },
+      "sha256": "291a4458266e730a877c96c2536942ce840b256a9be1355133f6bdc1638d0459",
+      "source_col": "e_form_per_atom",
+      "nonfinite_or_absent_ids": [],
+      "order": 8,
+      "figshare_response": {
+        "file_id": "66646340",
+        "status": 200,
+        "etag": "9b58f65f581aa6785e48e693d3ee842d",
+        "length": "1318830",
+        "disposition": "attachment; filename=\"models/esen/esen-30m-oam/2025-03-17-discovery.csv.gz\""
+      },
+      "compliant": false,
+      "card_sha256": "174d59ae4d4a673309311513e2a9447c1373caf879ba835cd8cfa4fdfca2d104",
+      "reason": "覆盖率达到门槛，顺序入选"
+    },
+    {
+      "model_id": "grace-3l-oam-l",
+      "model_name": "GRACE-3L-OAM-L",
+      "family": "grace",
+      "model_version": "1",
+      "training_sets": [
+        "MPtrj",
+        "OMat24",
+        "sAlex"
+      ],
+      "openness": "OSOD",
+      "card": "models/grace/grace-3l-oam-l.yml",
+      "F1": 0.925,
+      "DAF": 6.041,
+      "finite": 23821,
+      "coverage": 1.0,
+      "selected": true,
+      "pred_file": {
+        "name": "models/grace/grace-3l-oam-l/2026-07-02-discovery.csv.gz",
+        "url": "https://figshare.com/files/66646130",
+        "size": 2889887,
+        "md5": "a3799dbf73afef4cc709105d78312b13"
+      },
+      "sha256": "ddb5007d235f25b68a09b9c07fdce595320f4d50af1fa63ae357a454ce01208f",
+      "source_col": "e_form_per_atom",
+      "nonfinite_or_absent_ids": [],
+      "order": 9,
+      "figshare_response": {
+        "file_id": "66646130",
+        "status": 200,
+        "etag": "a3799dbf73afef4cc709105d78312b13",
+        "length": "2889887",
+        "disposition": "attachment; filename=\"models/grace/grace-3l-oam-l/2026-07-02-discovery.csv.gz\""
+      },
+      "compliant": false,
+      "card_sha256": "2e6e6f445e03840c854b9f2bab85580db51a5be1e36b4172feca90640556c54b",
+      "reason": "覆盖率达到门槛，顺序入选"
+    },
+    {
+      "model_id": "pet-oam-xl-1.0.0",
+      "model_name": "PET-OAM-XL",
+      "family": "pet",
+      "model_version": "1.0.0",
+      "training_sets": [
+        "MPtrj",
+        "OMat24",
+        "sAlex"
+      ],
+      "openness": "OSOD",
+      "card": "models/pet/pet-oam-xl-1.0.0.yml",
+      "F1": 0.924,
+      "DAF": 6.075,
+      "finite": 23821,
+      "coverage": 1.0,
+      "selected": true,
+      "pred_file": {
+        "name": "models/pet/pet-oam-xl-1.0.0/2026-01-10-discovery.csv.gz",
+        "url": "https://figshare.com/files/66646256",
+        "size": 1315508,
+        "md5": "0e7d1c2f73118eadd33dc777ab48eb0a"
+      },
+      "sha256": "86e76986aa13086f454af593a1dfd70ff5eac7927ce6f1b0b94e0c5f186ac53c",
+      "source_col": "e_form_per_atom",
+      "nonfinite_or_absent_ids": [],
+      "order": 10,
+      "figshare_response": {
+        "file_id": "66646256",
+        "status": 200,
+        "etag": "0e7d1c2f73118eadd33dc777ab48eb0a",
+        "length": "1315508",
+        "disposition": "attachment; filename=\"models/pet/pet-oam-xl-1.0.0/2026-01-10-discovery.csv.gz\""
+      },
+      "compliant": false,
+      "card_sha256": "334f84383c8819cf776583863620456b11c7a7639d3d7c6fe9e891386a57e823",
+      "reason": "覆盖率达到门槛，顺序入选"
+    },
+    {
+      "model_id": "matris-10m-oam",
+      "model_name": "MatRIS-10M-OAM",
+      "family": "matris",
+      "model_version": "v1",
+      "training_sets": [
+        "MPtrj",
+        "OMat24",
+        "sAlex"
+      ],
+      "openness": "OSOD",
+      "card": "models/matris/matris-10m-oam.yml",
+      "F1": 0.921,
+      "DAF": 6.039,
+      "finite": 23821,
+      "coverage": 1.0,
+      "selected": true,
+      "pred_file": {
+        "name": "models/matris/matris-10m-oam/2025-10-29-discovery.csv.gz",
+        "url": "https://figshare.com/files/66646226",
+        "size": 1317288,
+        "md5": "bbbb50212f3c5acbd305aacbaf420bc3"
+      },
+      "sha256": "a550f13dd3139704a3b4af5fa0f53989e7a174db4e07ccc001f03d514e7a5dd8",
+      "source_col": "e_form_per_atom",
+      "nonfinite_or_absent_ids": [],
+      "order": 11,
+      "figshare_response": {
+        "file_id": "66646226",
+        "status": 200,
+        "etag": "bbbb50212f3c5acbd305aacbaf420bc3",
+        "length": "1317288",
+        "disposition": "attachment; filename=\"models/matris/matris-10m-oam/2025-10-29-discovery.csv.gz\""
+      },
+      "compliant": false,
+      "card_sha256": "6f86be247eb125ccc3ea29c378c4121fbdbb2f3ae6a1618e2faccc7f12f80bcc",
+      "reason": "覆盖率达到门槛，顺序入选"
+    },
+    {
+      "model_id": "dpa-4.1-air-oam",
+      "model_name": "DPA-4.1-Air-OAM",
+      "family": "deepmd",
+      "model_version": null,
+      "training_sets": [
+        "MPtrj",
+        "OMat24",
+        "sAlex"
+      ],
+      "openness": "OSOD",
+      "card": "models/deepmd/dpa-4.1-air-oam.yml",
+      "F1": 0.921,
+      "DAF": 6.0,
+      "finite": 23821,
+      "coverage": 1.0,
+      "selected": true,
+      "pred_file": {
+        "name": "models/deepmd/dpa-4.1-air-oam/2026-10-03-discovery.csv.gz",
+        "size": 1315780,
+        "md5": "ed3468de9c4235fac3c3187725492812",
+        "url": "https://ndownloader.figshare.com/files/70537227"
+      },
+      "sha256": "ca6f0047f2269d039214cc8089a063284ac7cfdbfa347d07932ab0c96346c214",
+      "source_col": "e_form_per_atom",
+      "nonfinite_or_absent_ids": [],
+      "order": 12,
+      "figshare_response": {
+        "file_id": "70537227",
+        "status": 200,
+        "etag": "ed3468de9c4235fac3c3187725492812",
+        "length": "1315780",
+        "disposition": "attachment; filename=\"2026-10-03-discovery.csv.gz\""
+      },
+      "compliant": false,
+      "card_sha256": "01243614e63405a01f4a04eac1bc81a1be9878d00b5403efb7868ac9e129f70d",
+      "reason": "覆盖率达到门槛，顺序入选"
+    },
+    {
+      "model_id": "equflash-29m-oam",
+      "model_name": "EquFlash",
+      "family": "equflash",
+      "model_version": "v2025.06.23",
+      "training_sets": [
+        "MPtrj",
+        "OMat24",
+        "sAlex"
+      ],
+      "openness": "CSOD",
+      "card": "models/equflash/equflash-29m-oam.yml",
+      "F1": 0.919,
+      "DAF": 5.983,
+      "finite": 23821,
+      "coverage": 1.0,
+      "selected": true,
+      "pred_file": {
+        "name": "models/equflash/equflash-29m-oam/2025-06-23-discovery.csv.gz",
+        "url": "https://figshare.com/files/66646271",
+        "size": 2771470,
+        "md5": "20f3e747f848fc3f74999c5671f66e02"
+      },
+      "sha256": "b1eecb4a236ee794bc88a9048f0ec1582568c205a7f95b593f61e80bfdc7d8c8",
+      "source_col": "e_form_per_atom",
+      "nonfinite_or_absent_ids": [],
+      "order": 13,
+      "figshare_response": {
+        "file_id": "66646271",
+        "status": 200,
+        "etag": "20f3e747f848fc3f74999c5671f66e02",
+        "length": "2771470",
+        "disposition": "attachment; filename=\"models/equflash/equflash-29m-oam/2025-06-23-discovery.csv.gz\""
+      },
+      "compliant": false,
+      "card_sha256": "b40454ab53afea0c99b7975a5aba2a12426854df6c0dc0259bac64321a613b22",
+      "reason": "覆盖率达到门槛，顺序入选"
+    },
+    {
+      "model_id": "eqv2-m-omat-salex-mp",
+      "model_name": "eqV2 M",
+      "family": "eqv2",
+      "model_version": "v2024.10.18",
+      "training_sets": [
+        "MPtrj",
+        "OMat24"
+      ],
+      "openness": "OSOD",
+      "card": "models/eqv2/eqv2-m-omat-salex-mp.yml",
+      "F1": 0.917,
+      "DAF": 6.047,
+      "finite": 23821,
+      "coverage": 1.0,
+      "selected": true,
+      "pred_file": {
+        "name": "models/eqv2/eqv2-m-omat-salex-mp/2024-10-18-discovery.csv.gz",
+        "url": "https://figshare.com/files/66646142",
+        "size": 1327151,
+        "md5": "3658def6173e02579455ba480ff77ea4"
+      },
+      "sha256": "b21f337b05bb5043d47ea17e3e61aa819bb3c46e2cb18923d9f07829b3cce11e",
+      "source_col": "e_form_per_atom",
+      "nonfinite_or_absent_ids": [],
+      "order": 14,
+      "figshare_response": {
+        "file_id": "66646142",
+        "status": 200,
+        "etag": "3658def6173e02579455ba480ff77ea4",
+        "length": "1327151",
+        "disposition": "attachment; filename=\"models/eqv2/eqv2-m-omat-salex-mp/2024-10-18-discovery.csv.gz\""
+      },
+      "compliant": false,
+      "card_sha256": "737e91cde69b2bf0d0647e63362e7e43cabec4fffab9eae1926f4284b729ff98",
+      "reason": "覆盖率达到门槛，顺序入选"
+    },
+    {
+      "model_id": "tace-oam-l",
+      "model_name": "TACE-OAM-L",
+      "family": "tace",
+      "model_version": "0.2.0",
+      "training_sets": [
+        "MPtrj",
+        "OMat24",
+        "sAlex"
+      ],
+      "openness": "OSOD",
+      "card": "models/tace/tace-oam-l.yml",
+      "F1": 0.91,
+      "DAF": 5.898,
+      "finite": 23821,
+      "coverage": 1.0,
+      "selected": true,
+      "pred_file": {
+        "name": "models/tace/tace-oam-l/2026-04-09-discovery.csv.gz",
+        "url": "https://figshare.com/files/66646247",
+        "size": 1648063,
+        "md5": "deecc3cbb9f2695f5e5ce1763e216ba6"
+      },
+      "sha256": "368a1c5bfa20fc9b7cbe0898505ae6bb24f188c27edd15afc26f3d5ab67c6272",
+      "source_col": "e_form_per_atom",
+      "nonfinite_or_absent_ids": [],
+      "order": 15,
+      "figshare_response": {
+        "file_id": "66646247",
+        "status": 200,
+        "etag": "deecc3cbb9f2695f5e5ce1763e216ba6",
+        "length": "1648063",
+        "disposition": "attachment; filename=\"models/tace/tace-oam-l/2026-04-09-discovery.csv.gz\""
+      },
+      "compliant": false,
+      "card_sha256": "d19fd9dea08e6f69befab625a96ac1eeb9c4f16cc85cd1bb10cf2216351a701b",
+      "reason": "覆盖率达到门槛，顺序入选"
+    }
+  ],
+  "skipped_after_quota": [
+    {
+      "order": 16,
+      "model_id": "sevennet-omni-i12",
+      "model_name": "SevenNet-Omni-i12",
+      "family": "sevennet",
+      "card": "models/sevennet/sevennet-omni-i12.yml",
+      "F1": 0.906,
+      "DAF": 5.954,
+      "training_sets": [
+        "COSMOSDataset"
+      ],
+      "compliant": false,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 17,
+      "model_id": "nequip-oam-xl-0.1",
+      "model_name": "Nequip-OAM-XL",
+      "family": "nequip",
+      "card": "models/nequip/nequip-oam-xl-0.1.yml",
+      "F1": 0.906,
+      "DAF": 5.869,
+      "training_sets": [
+        "MPtrj",
+        "OMat24",
+        "sAlex"
+      ],
+      "compliant": false,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 18,
+      "model_id": "orb-v3",
+      "model_name": "ORB v3",
+      "family": "orb",
+      "card": "models/orb/orb-v3.yml",
+      "F1": 0.905,
+      "DAF": 5.912,
+      "training_sets": [
+        "MPtrj",
+        "Alex",
+        "OMat24"
+      ],
+      "compliant": false,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 19,
+      "model_id": "mace-soyo-oam",
+      "model_name": "MACE-SOYO-OAM",
+      "family": "mace_soyo",
+      "card": "models/mace_soyo/mace-soyo-oam.yml",
+      "F1": 0.903,
+      "DAF": 5.922,
+      "training_sets": [
+        "MPtrj",
+        "OMat24",
+        "sAlex"
+      ],
+      "compliant": false,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 20,
+      "model_id": "sevennet-mf-ompa",
+      "model_name": "SevenNet-MF-ompa",
+      "family": "sevennet",
+      "card": "models/sevennet/sevennet-mf-ompa.yml",
+      "F1": 0.901,
+      "DAF": 5.825,
+      "training_sets": [
+        "MPtrj",
+        "OMat24",
+        "sAlex"
+      ],
+      "compliant": false,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 21,
+      "model_id": "alphanet-v1-oam",
+      "model_name": "AlphaNet-v1-OAM",
+      "family": "alphanet",
+      "card": "models/alphanet/alphanet-v1-oam.yml",
+      "F1": 0.901,
+      "DAF": 5.747,
+      "training_sets": [
+        "MPtrj",
+        "OMat24",
+        "sAlex"
+      ],
+      "compliant": false,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 22,
+      "model_id": "allegro-oam-l-0.1",
+      "model_name": "Allegro-OAM-L",
+      "family": "allegro",
+      "card": "models/allegro/allegro-oam-l-0.1.yml",
+      "F1": 0.895,
+      "DAF": 5.674,
+      "training_sets": [
+        "MPtrj",
+        "OMat24",
+        "sAlex"
+      ],
+      "compliant": false,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 23,
+      "model_id": "nequip-oam-l-0.1",
+      "model_name": "Nequip-OAM-L",
+      "family": "nequip",
+      "card": "models/nequip/nequip-oam-l-0.1.yml",
+      "F1": 0.893,
+      "DAF": 5.823,
+      "training_sets": [
+        "MPtrj",
+        "OMat24",
+        "sAlex"
+      ],
+      "compliant": false,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 24,
+      "model_id": "dpa3-v2-openlam",
+      "model_name": "DPA3-v2-OpenLAM",
+      "family": "deepmd",
+      "card": "models/deepmd/dpa3-v2-openlam.yml",
+      "F1": 0.89,
+      "DAF": 5.747,
+      "training_sets": [
+        "OpenLAM"
+      ],
+      "compliant": false,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 25,
+      "model_id": "tace-v1-oam-m",
+      "model_name": "TACE-v1-OAM-M",
+      "family": "tace",
+      "card": "models/tace/tace-v1-oam-m.yml",
+      "F1": 0.889,
+      "DAF": 5.749,
+      "training_sets": [
+        "MPtrj",
+        "OMat24",
+        "sAlex"
+      ],
+      "compliant": false,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 26,
+      "model_id": "dpa-3.1-3m-ft",
+      "model_name": "DPA-3.1-3M-FT",
+      "family": "deepmd",
+      "card": "models/deepmd/dpa-3.1-3m-ft.yml",
+      "F1": 0.884,
+      "DAF": 5.667,
+      "training_sets": [
+        "OpenLAM"
+      ],
+      "compliant": false,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 27,
+      "model_id": "grace-2l-oam-l",
+      "model_name": "GRACE-2L-OAM-L",
+      "family": "grace",
+      "card": "models/grace/grace-2l-oam-l.yml",
+      "F1": 0.883,
+      "DAF": 5.84,
+      "training_sets": [
+        "MPtrj",
+        "OMat24",
+        "sAlex"
+      ],
+      "compliant": false,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 28,
+      "model_id": "dpa3-v1-openlam",
+      "model_name": "DPA3-v1-OpenLAM",
+      "family": "deepmd",
+      "card": "models/deepmd/dpa3-v1-openlam.yml",
+      "F1": 0.883,
+      "DAF": 5.754,
+      "training_sets": [
+        "OpenLAM"
+      ],
+      "compliant": false,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 29,
+      "model_id": "orb-v2",
+      "model_name": "ORB v2 MPA",
+      "family": "orb",
+      "card": "models/orb/orb-v2.yml",
+      "F1": 0.88,
+      "DAF": 6.041,
+      "training_sets": [
+        "MPtrj",
+        "Alex"
+      ],
+      "compliant": false,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 30,
+      "model_id": "grace-2l-oam",
+      "model_name": "GRACE-2L-OAM",
+      "family": "grace",
+      "card": "models/grace/grace-2l-oam.yml",
+      "F1": 0.88,
+      "DAF": 5.774,
+      "training_sets": [
+        "MPtrj",
+        "OMat24",
+        "sAlex"
+      ],
+      "compliant": false,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 31,
+      "model_id": "equiformer-v3-mp",
+      "model_name": "EquiformerV3+DeNS-MP",
+      "family": "equiformer_v3",
+      "card": "models/equiformer_v3/equiformer-v3-mp.yml",
+      "F1": 0.863,
+      "DAF": 5.479,
+      "training_sets": [
+        "MPtrj"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 32,
+      "model_id": "mattersim-v1-5m",
+      "model_name": "MatterSim v1 5M",
+      "family": "mattersim",
+      "card": "models/mattersim/mattersim-v1-5m.yml",
+      "F1": 0.862,
+      "DAF": 5.852,
+      "training_sets": [
+        "MatterSim"
+      ],
+      "compliant": false,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 33,
+      "model_id": "dpa-4.0.1-pro-mptrj",
+      "model_name": "DPA-4.0.1-Pro-MPtrj",
+      "family": "deepmd",
+      "card": "models/deepmd/dpa-4.0.1-pro-mptrj.yml",
+      "F1": 0.857,
+      "DAF": 5.609,
+      "training_sets": [
+        "MPtrj"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 34,
+      "model_id": "mace-mpa-0",
+      "model_name": "MACE-MPA-0",
+      "family": "mace",
+      "card": "models/mace/mace-mpa-0.yml",
+      "F1": 0.852,
+      "DAF": 5.582,
+      "training_sets": [
+        "MPtrj",
+        "sAlex"
+      ],
+      "compliant": false,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 35,
+      "model_id": "dpa-4.0-pro-mptrj",
+      "model_name": "DPA-4.0-Pro-MPtrj",
+      "family": "deepmd",
+      "card": "models/deepmd/dpa-4.0-pro-mptrj.yml",
+      "F1": 0.85,
+      "DAF": 5.628,
+      "training_sets": [
+        "MPtrj"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 36,
+      "model_id": "matris-10m-mp",
+      "model_name": "MatRIS-10M-MP",
+      "family": "matris",
+      "card": "models/matris/matris-10m-mp.yml",
+      "F1": 0.847,
+      "DAF": 5.422,
+      "training_sets": [
+        "MPtrj"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 37,
+      "model_id": "esen-30m-mp",
+      "model_name": "eSEN-30M-MP",
+      "family": "esen",
+      "card": "models/esen/esen-30m-mp.yml",
+      "F1": 0.831,
+      "DAF": 5.26,
+      "training_sets": [
+        "MPtrj"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 38,
+      "model_id": "gnome",
+      "model_name": "NequIP-GNoME",
+      "family": "gnome",
+      "card": "models/gnome/gnome.yml",
+      "F1": 0.829,
+      "DAF": 5.523,
+      "training_sets": [
+        "GNoME"
+      ],
+      "compliant": false,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 39,
+      "model_id": "grace-1l-oam",
+      "model_name": "GRACE-1L-OAM",
+      "family": "grace",
+      "card": "models/grace/grace-1l-oam.yml",
+      "F1": 0.824,
+      "DAF": 5.255,
+      "training_sets": [
+        "MPtrj",
+        "OMat24",
+        "sAlex"
+      ],
+      "compliant": false,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 40,
+      "model_id": "eqv2-s-dens-mp",
+      "model_name": "eqV2 S DeNS",
+      "family": "eqv2",
+      "card": "models/eqv2/eqv2-s-dens-mp.yml",
+      "F1": 0.815,
+      "DAF": 5.042,
+      "training_sets": [
+        "MPtrj"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 41,
+      "model_id": "matris-v050-mptrj",
+      "model_name": "MatRIS v0.5.0 MPtrj",
+      "family": "matris",
+      "card": "models/matris/matris-v050-mptrj.yml",
+      "F1": 0.809,
+      "DAF": 5.049,
+      "training_sets": [
+        "MPtrj"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 42,
+      "model_id": "dpa-3.1-mptrj",
+      "model_name": "DPA-3.1-MPtrj",
+      "family": "deepmd",
+      "card": "models/deepmd/dpa-3.1-mptrj.yml",
+      "F1": 0.803,
+      "DAF": 5.024,
+      "training_sets": [
+        "MPtrj"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 43,
+      "model_id": "dpa-4.1c-air-oam",
+      "model_name": "DPA-4.1C-Air-OAM",
+      "family": "deepmd",
+      "card": "models/deepmd/dpa-4.1c-air-oam.yml",
+      "F1": 0.799,
+      "DAF": 5.12,
+      "training_sets": [
+        "MPtrj",
+        "OMat24",
+        "sAlex"
+      ],
+      "compliant": false,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 44,
+      "model_id": "alphanet-v1-mptrj",
+      "model_name": "AlphaNet-v1-MPtrj",
+      "family": "alphanet",
+      "card": "models/alphanet/alphanet-v1-mptrj.yml",
+      "F1": 0.799,
+      "DAF": 4.863,
+      "training_sets": [
+        "MPtrj"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 45,
+      "model_id": "eqnorm-mptrj",
+      "model_name": "Eqnorm MPtrj",
+      "family": "eqnorm",
+      "card": "models/eqnorm/eqnorm-mptrj.yml",
+      "F1": 0.786,
+      "DAF": 4.844,
+      "training_sets": [
+        "MPtrj"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 46,
+      "model_id": "dpa3-v2-mptrj",
+      "model_name": "DPA3-v2-MPtrj",
+      "family": "deepmd",
+      "card": "models/deepmd/dpa3-v2-mptrj.yml",
+      "F1": 0.786,
+      "DAF": 4.822,
+      "training_sets": [
+        "MPtrj"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 47,
+      "model_id": "hienet",
+      "model_name": "HIENet",
+      "family": "hienet",
+      "card": "models/hienet/hienet.yml",
+      "F1": 0.777,
+      "DAF": 4.932,
+      "training_sets": [
+        "MPtrj"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 48,
+      "model_id": "mace-soyo-mptrj",
+      "model_name": "MACE-SOYO-MPtrj",
+      "family": "mace_soyo",
+      "card": "models/mace_soyo/mace-soyo-mptrj.yml",
+      "F1": 0.777,
+      "DAF": 4.794,
+      "training_sets": [
+        "MPtrj"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 49,
+      "model_id": "orb-v2-mptrj",
+      "model_name": "ORB v2 MPtrj",
+      "family": "orb",
+      "card": "models/orb/orb-v2-mptrj.yml",
+      "F1": 0.765,
+      "DAF": 4.702,
+      "training_sets": [
+        "MPtrj"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 50,
+      "model_id": "dpa3-v1-mptrj",
+      "model_name": "DPA3-v1-MPtrj",
+      "family": "deepmd",
+      "card": "models/deepmd/dpa3-v1-mptrj.yml",
+      "F1": 0.765,
+      "DAF": 4.654,
+      "training_sets": [
+        "MPtrj"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 51,
+      "model_id": "nequip-mp-l-0.1",
+      "model_name": "Nequip-MP-L",
+      "family": "nequip",
+      "card": "models/nequip/nequip-mp-l-0.1.yml",
+      "F1": 0.761,
+      "DAF": 4.704,
+      "training_sets": [
+        "MPtrj"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 52,
+      "model_id": "bam-mp-dens",
+      "model_name": "BAM-MP-DeNS",
+      "family": "bam",
+      "card": "models/bam/bam-mp-dens.yml",
+      "F1": 0.761,
+      "DAF": 4.614,
+      "training_sets": [
+        "MPtrj"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 53,
+      "model_id": "sevennet-l3i5",
+      "model_name": "SevenNet-l3i5",
+      "family": "sevennet",
+      "card": "models/sevennet/sevennet-l3i5.yml",
+      "F1": 0.76,
+      "DAF": 4.629,
+      "training_sets": [
+        "MPtrj"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 54,
+      "model_id": "allegro-mp-l-0.1",
+      "model_name": "Allegro-MP-L",
+      "family": "allegro",
+      "card": "models/allegro/allegro-mp-l-0.1.yml",
+      "F1": 0.751,
+      "DAF": 4.516,
+      "training_sets": [
+        "MPtrj"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 55,
+      "model_id": "nequix-mp-1",
+      "model_name": "Nequix MP",
+      "family": "nequix",
+      "card": "models/nequix/nequix-mp-1.yml",
+      "F1": 0.751,
+      "DAF": 4.455,
+      "training_sets": [
+        "MPtrj"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 56,
+      "model_id": "nequix-mp-1-pft",
+      "model_name": "Nequix MP PFT",
+      "family": "nequix",
+      "card": "models/nequix/nequix-mp-1-pft.yml",
+      "F1": 0.748,
+      "DAF": 4.479,
+      "training_sets": [
+        "MPtrj",
+        "MDR-MP PBE ω_q"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 57,
+      "model_id": "sevennet-0",
+      "model_name": "SevenNet-0",
+      "family": "sevennet",
+      "card": "models/sevennet/sevennet-0.yml",
+      "F1": 0.724,
+      "DAF": 4.252,
+      "training_sets": [
+        "MPtrj"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 58,
+      "model_id": "alignn-ff-mptrj",
+      "model_name": "ALIGNN-FF MPtrj",
+      "family": "alignn_ff",
+      "card": "models/alignn_ff/alignn-ff-mptrj.yml",
+      "F1": 0.697,
+      "DAF": 4.108,
+      "training_sets": [
+        "MPtrj"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 59,
+      "model_id": "grace-2l-mptrj",
+      "model_name": "GRACE-2L-MPtrj",
+      "family": "grace",
+      "card": "models/grace/grace-2l-mptrj.yml",
+      "F1": 0.691,
+      "DAF": 4.163,
+      "training_sets": [
+        "MPtrj"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 60,
+      "model_id": "mace-mp-0",
+      "model_name": "MACE-MP-0",
+      "family": "mace",
+      "card": "models/mace/mace-mp-0.yml",
+      "F1": 0.669,
+      "DAF": 3.777,
+      "training_sets": [
+        "MPtrj"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 61,
+      "model_id": "bam-mp-core",
+      "model_name": "BAM-MP-core",
+      "family": "bam",
+      "card": "models/bam/bam-mp-core.yml",
+      "F1": 0.623,
+      "DAF": 3.682,
+      "training_sets": [
+        "MPtrj"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 62,
+      "model_id": "chgnet-0.3.0",
+      "model_name": "CHGNet",
+      "family": "chgnet",
+      "card": "models/chgnet/chgnet-0.3.0.yml",
+      "F1": 0.613,
+      "DAF": 3.361,
+      "training_sets": [
+        "MPtrj"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 63,
+      "model_id": "esnet",
+      "model_name": "ESNet",
+      "family": "esnet",
+      "card": "models/esnet/esnet.yml",
+      "F1": 0.572,
+      "DAF": 3.498,
+      "training_sets": [
+        "MP 2022"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 64,
+      "model_id": "m3gnet",
+      "model_name": "M3GNet",
+      "family": "m3gnet",
+      "card": "models/m3gnet/m3gnet.yml",
+      "F1": 0.569,
+      "DAF": 2.882,
+      "training_sets": [
+        "MPF"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 65,
+      "model_id": "alignn",
+      "model_name": "ALIGNN",
+      "family": "alignn",
+      "card": "models/alignn/alignn.yml",
+      "F1": 0.567,
+      "DAF": 3.206,
+      "training_sets": [
+        "MP 2022"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 66,
+      "model_id": "ema-gnn",
+      "model_name": "EMA-GNN",
+      "family": "ema_gnn",
+      "card": "models/ema_gnn/ema-gnn.yml",
+      "F1": 0.558,
+      "DAF": 2.753,
+      "training_sets": [
+        "MP 2022"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 67,
+      "model_id": "megnet",
+      "model_name": "MEGNet",
+      "family": "megnet",
+      "card": "models/megnet/megnet.yml",
+      "F1": 0.51,
+      "DAF": 2.959,
+      "training_sets": [
+        "MP Graphs"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 68,
+      "model_id": "cgcnn",
+      "model_name": "CGCNN",
+      "family": "cgcnn",
+      "card": "models/cgcnn/cgcnn.yml",
+      "F1": 0.507,
+      "DAF": 2.855,
+      "training_sets": [
+        "MP 2022"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 69,
+      "model_id": "cgcnn-p",
+      "model_name": "CGCNN+P",
+      "family": "cgcnn",
+      "card": "models/cgcnn/cgcnn-p.yml",
+      "F1": 0.5,
+      "DAF": 2.563,
+      "training_sets": [
+        "MP 2022"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 70,
+      "model_id": "wrenformer",
+      "model_name": "Wrenformer",
+      "family": "wrenformer",
+      "card": "models/wrenformer/wrenformer.yml",
+      "F1": 0.466,
+      "DAF": 2.256,
+      "training_sets": [
+        "MP 2022"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 71,
+      "model_id": "bowsr",
+      "model_name": "BOWSR",
+      "family": "bowsr",
+      "card": "models/bowsr/bowsr.yml",
+      "F1": 0.423,
+      "DAF": 1.964,
+      "training_sets": [
+        "MP Graphs"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 72,
+      "model_id": "alchembert",
+      "model_name": "AlchemBERT",
+      "family": "alchembert",
+      "card": "models/alchembert/alchembert.yml",
+      "F1": 0.421,
+      "DAF": 2.001,
+      "training_sets": [
+        "MP 2022"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    },
+    {
+      "order": 73,
+      "model_id": "voronoi-rf",
+      "model_name": "Voronoi RF",
+      "family": "voronoi_rf",
+      "card": "models/voronoi_rf/voronoi-rf.yml",
+      "F1": 0.333,
+      "DAF": 1.579,
+      "training_sets": [
+        "MP 2022"
+      ],
+      "compliant": true,
+      "selected": false,
+      "coverage": null,
+      "reason": "已达15个，无需检测覆盖率"
+    }
+  ],
+  "unrankable": [
+    {
+      "card": "models/alignn_ff/alignn-ff.yml",
+      "reason": "缺少公开 discovery 预测文件映射"
+    }
+  ],
+  "make_ref_sha256": "e7d9df1385aef18c593518e41de983661e59d3145bded0199296f09e4a1720b1",
+  "outputs_sha256": {
+    "unlabeled_candidate_pool.csv": "15d796d5d9a93c05794ab40ad5e88f3e8b62c3c884ae79dbc734dbfe3c8d360c",
+    "reference_hull_energies.csv": "f83ca94322c7a86afe43ac6cce8da7aecc374929f31aebb239b59292932df88d"
+  },
+  "software_python": "3.11.15",
+  "card_version_note": "model_version=null 表示模型卡未单列版本；以 model_key、固定提交、模型卡与预测文件哈希标识实际输入。"
+}

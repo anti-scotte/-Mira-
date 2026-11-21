@@ -1,0 +1,6 @@
+/inputs/blind/** -text
+/results/** -text
+/code/reconstructed/** -text
+/code/revision/** -text
+/evidence/reviews/** -text
+/evidence/superseded/** -text

@@ -1,0 +1,18 @@
+{
+  "protocol": "Q9-v2-proposed", "team_approval": null, "project_brief": "四人组已提供项目说明正文，设计与验收要求已纳入01–04", "approval_note": "正式排名前签认范围、模型版本、基线、同分规则。",
+  "K": 20, "demo_K": 10, "subset": "unique_prototypes", "subset_column": "unique_prototype", "subset_value": "True", "id": "material_id", "composition": "formula",
+  "oxide_rule": "必须含O且至少含一种白名单金属；所有非O元素必须在白名单内。组成代理，不判氧化态。",
+  "metals": "Li Na K Rb Cs Mg Ca Sr Ba Al Sc Ti V Cr Mn Fe Co Ni Cu Zn Y Zr Nb Mo Ru Rh Pd Ag Cd Hf Ta W Re Os Ir Pt Au La Ce Pr Nd Sm Eu Gd Tb Dy Ho Er Tm Yb Lu",
+  "model_ids": ["chgnet-0.3.0", "m3gnet", "mace-mp-0"], "baseline": "chgnet-0.3.0", "prediction_column": "e_form_per_atom", "unit": "eV/atom", "score": "predicted_formation_energy_per_atom - MP_hull_formation_energy_per_atom(composition)",
+  "rank": "binary64不舍入；每模型按(score升序,material_id ASCII字典升序)从1连续编号；共识按(三个序号中位数升序,同一ID顺序)；不得按能量取中位数", "invalid_K": "非整数、布尔或不在[1,N]即报错；不截断不补位",
+  "truth_column": "e_above_hull_mp2020_corrected_ppd_mp", "stable": "finite and <= 0", "official_identity_dft_formation_column": "e_form_per_atom_mp2020_corrected", "error_filter": false, "random_baseline": {"population":"完整冻结候选池", "label_access":"双名单冻结后", "sampling":"均匀无放回", "N":"池内唯一ID数", "S":"池内有限DFT距离<=0的ID数", "expected_hits":"K*S/N", "expected_precision":"S/N"}, "winner":"按命中数比较；相等即平局",
+  "paper": "https://arxiv.org/html/2308.14920v3", "benchmark": "https://matbench-discovery.materialsproject.org/", "repository": "https://github.com/janosh/matbench-discovery", "commit": "6d587c184cdb4a4865dc0b15b04a5e6d77ed464f", "reference_release": "MP v2022.10.28 / 2023-02-07-ppd-mp", "download_base": "https://ndownloader.figshare.com/files/",
+  "assets": {
+    "summary": {"file_id":"64706751", "path":"wbm/2023-12-13-wbm-summary.csv.gz", "sha256":"adbdd8b24086d4888195d8894c77f6d5fb29ce33bbb5d7d3898b4d79e964dc54"},
+    "chgnet-0.3.0": {"file_id":"66646268", "path":"models/chgnet/chgnet-0.3.0/2023-12-21-discovery.csv.gz", "sha256":"b04ce3b031827fcd532e22058d06dc77fb4705ce8b12aea54652a14504e41f16"},
+    "m3gnet": {"file_id":"66646262", "path":"models/m3gnet/m3gnet/2023-12-28-discovery.csv.gz", "sha256":"dd04ce627453b529d50725db27d00c32ff2ad8d3a956ee103c999258ef903448"},
+    "mace-mp-0": {"file_id":"66646193", "path":"models/mace/mace-mp-0/2023-12-11-discovery.csv.gz", "sha256":"527c62dcdc7a726bc069848bf3e44f53d3f70860396ea3b7efcf6cca3ea26144"},
+    "mp_ppd": {"file_id":"48241624", "path":"mp/2023-02-07-ppd-mp.pkl.gz", "md5":"60d19d691fa1d338aa496a40a9641bef", "sha256":null, "note":"固定提交的官方清单已核对，未在本机反序列化或计算H；新项目必须核对字节再在隔离环境加载。"}
+  },
+  "verified_counts": {"summary":256963,"unique":215488,"composition_pass":10165,"common_finite_predictions":10165,"prediction_rows":[256963,256610,256925],"pool_missing_by_model":[0,0,0],"pool_nonfinite_by_model":[0,0,0]}, "finite_hull_score_count":null, "reason":"未运行正式凸包投影或候选排序。"
+}

@@ -1,0 +1,203 @@
+{
+  "schema": "f1_reconciliation.v2",
+  "task": "方向一 F1 勘误：结构化核对登记（stage=synthesize）",
+  "generated_at": "2026-11-21T15:35:00+08:00",
+  "generated_by": "综合阶段成员（仅综合上游产物，未重跑评测、未改写上游结论方向）",
+  "model": "dpa-4.1-max-oam-pft",
+  "universe": {
+    "description": "WBM unique_prototype=True，全部化学体系，与冠军预测按 material_id 一对一连接",
+    "n": 215488,
+    "unique_prototype_true_rows": 215488,
+    "aligned_missing_in_champion": 0,
+    "duplicate_material_id_rows": 0,
+    "oxygen_containing_rows": 23821,
+    "oxygen_rows_role": "仅用于 23,821 个含氧候选的名单命中分析，不进入 F1 分母"
+  },
+  "criteria": {
+    "truth_label_column": "e_above_hull_mp2020_corrected_ppd_mp",
+    "truth_positive_rule": "e_above_hull_mp2020_corrected_ppd_mp <= 0",
+    "predicted_distance_formula": "e_form_per_atom - (e_form_per_atom_mp2020_corrected - e_above_hull_mp2020_corrected_ppd_mp)",
+    "prediction_positive_rule": "predicted_distance <= 0",
+    "f1_formula": "2*TP/(2*TP+FP+FN)",
+    "units_note": "被比较的两侧均为凸包距离（eV/atom）；absolute_difference 为 F1 差值，无量纲，不是 eV/atom"
+  },
+  "run": {
+    "run_id": "20261121T065233302369Z",
+    "run_timestamp_utc": "2026-11-21T06:52:33.302369+00:00",
+    "output_dir": "runs/20261121T065233302369Z",
+    "command_executed": "python3 recheck_v2.py",
+    "published_rerun_command": "python3 shared/recheck_v2.py --f1-tolerance 0.0005",
+    "script": "shared/recheck_v2.py",
+    "script_sha256": "f7ed569ababf6d78ecd14aafb8658f400af0d05244ff2da2747d2591e2a32c88",
+    "stdout": "runs/20261121T065233302369Z/stdout.log",
+    "result_json": "runs/20261121T065233302369Z/f1_run_result.json",
+    "hits_detail": "runs/20261121T065233302369Z/f1_hits_detail.csv",
+    "single_run_note": "stdout.log、f1_run_result.json 与报告摘要均由同一次运行内同一对象生成（f1_run_result.json / report_summary、/stdout_file=/stdout.log），run_id 一致，不跨运行混用"
+  },
+  "confusion_matrix": {
+    "n": 215488,
+    "TP": 30939,
+    "FP": 2326,
+    "TN": 180220,
+    "FN": 2003,
+    "positives_truth": 32942,
+    "positives_predicted": 33265,
+    "sum_check": "TP+FP+TN+FN = 215488 = n"
+  },
+  "f1_result": {
+    "f1_this_run": 0.9346141646653677,
+    "card_f1": 0.935,
+    "absolute_difference": 0.0003858353346323229,
+    "absolute_difference_definition": "|f1_this_run - card_f1|",
+    "preregistered_gate": "abs(F1 - 0.935) <= 0.02",
+    "preregistered_gate_margin": 0.019614164665367678,
+    "program_selfcheck_status": "通过（PASS）",
+    "program_selfcheck_basis": "预注册门槛 0.02 下 |Δ|=0.0003858353346323229 ≪ 0.02；脚本内显式记录 passed=true",
+    "script_internal_tolerance": {
+      "value": 0.0005,
+      "source": "recheck_v2.py DEFAULT_TOL = 0.5 * 10**-3（模型卡末位半单位，历史断言容差无文档）",
+      "result_under_this_tolerance": "passed=true，余量 0.0001141646653676771（贴线通过）",
+      "note": "内部容差仅作交叉参考，结论依据仍是用户预注册的 0.02"
+    },
+    "human_signoff_status": "待另一位真人队员独立复跑后签认"
+  },
+  "gate_explicit_recording": {
+    "old_behaviour": "原 recheck.py 以断言方式判定 F1 门槛，失败即中断，输出目录不区分本轮",
+    "new_behaviour": "recheck_v2.py 以 passed=diff<=tolerance 显式计算，并把 passed、tolerance、absolute_difference 写入结果 JSON、stdout 与报告摘要三处，不再以断言中断",
+    "tolerance_source_line": "shared/recheck_v2.py 第 159 行 argparse --f1-tolerance（default=DEFAULT_TOL），第 175 行 passed = diff <= args.f1_tolerance"
+  },
+  "frozen_hits_k20": {
+    "S_hits": 20,
+    "S_list_len": 20,
+    "C_hits": 20,
+    "C_list_len": 20,
+    "C_minus_S": 0,
+    "absolute_hit_difference": 0,
+    "both_hit": 18,
+    "only_S_hit": 2,
+    "only_C_hit": 2,
+    "only_S_ids": ["wbm-1-38115", "wbm-1-36714"],
+    "only_C_ids": ["wbm-3-52495", "wbm-2-35012"],
+    "identity_check": "Hits(C)-Hits(S) = only_C_hit - only_S_hit = 2-2 = 0",
+    "source": "shared/f1_run_result.json /frozen_hits_by_budget/20 与 shared/f1_hits_detail.csv budget_k=20 行",
+    "conclusion": "K=20 两名单各自的命中数持平（各 20/20，命中率均 100%），差别仅在 2 个材料互换，差值为 0"
+  },
+  "frozen_hits_all_budgets": {
+    "20": {"S": 20, "C": 20, "diff": 0},
+    "50": {"S": 49, "C": 50, "diff": 1},
+    "100": {"S": 99, "C": 99, "diff": 0},
+    "200": {"S": 198, "C": 199, "diff": 1},
+    "500": {"S": 489, "C": 490, "diff": 1},
+    "1000": {"S": 980, "C": 982, "diff": 2},
+    "2000": {"S": 1935, "C": 1946, "diff": 11}
+  },
+  "historical_value_provenance": {
+    "value_0.9346141646653677": {
+      "label_as_in_task": "0.9346141647",
+      "source_script": "原 E:\\codex\\Re0\\Mathbench Discovery\\第三阶段本地修订\\recheck.py（SHA-256 b23b4f75de8c15a1e372aee06e8b8a048256fb312a52ba90c48bb272b4cf17a6），stdout 'F1=0.9346141647'；源码在本运行时不可读",
+      "true_label": "e_above_hull_mp2020_corrected_ppd_mp <= 0（原始 DFT 凸包距离）",
+      "prediction_criterion": "pred - (e_form_per_atom_mp2020_corrected - e_above_hull_mp2020_corrected_ppd_mp) <= 0",
+      "confusion_matrix": {"TP": 30939, "FP": 2326, "TN": 180220, "FN": 2003},
+      "f1": 0.9346141646653677,
+      "absolute_difference_vs_card": 0.0003858353346323229,
+      "is_current_definition": true,
+      "note": "与本轮 recheck_v2.py 实跑四格与 F1 逐位相同，属同一口径的历史复现"
+    },
+    "value_0.268762": {
+      "full_value": 0.26876223756379747,
+      "source_script": "无脚本 stdout：登记于 shared/recheck_evidence.json /f1_check/f1 与 /archived_result_data/f1，并被 shared/final_report.md §3 的方向一审核汇总引用",
+      "true_label": "复合参考 e_form_per_atom_mp2020_corrected - e_above_hull_mp2020_corrected_ppd_mp <= 0（正类 213,414 行），不是原始凸包列",
+      "prediction_criterion": "pred - (e_form_per_atom_mp2020_corrected - e_above_hull_mp2020_corrected_ppd_mp) <= 0（与 0.934614 预测侧相同）",
+      "confusion_matrix": {"TP": 33149, "FP": 116, "TN": 1958, "FN": 180265},
+      "f1": 0.26876223756379747,
+      "absolute_difference_vs_card": 0.6662377624362026,
+      "is_current_definition": false,
+      "inconsistency": "recheck_evidence.json /f1_check 正文写的是原始凸包列判据，但 TP=33149 超过全体 hull<=0 计数 32,942，数学上不可能出自正文判据；该矩阵只在复合参考判据下成立（shared/metric_signoff.md finding-1 引用公式即此）。按正文判据实算为 F1=0.2675652892697259。"
+    },
+    "value_0.2047": {
+      "full_value": 0.20473487310597854,
+      "source_script": "独立复核岗自写脚本 scratch/indep_review.py 与 scratch/f1_probe.py（shared/independent_review.md §2：复核脚本全部自写，未 import 上游脚本）",
+      "true_label": "e_above_hull_mp2020_corrected_ppd_mp <= 0（原始 DFT 凸包距离）",
+      "prediction_criterion": "pred - e_form_per_atom_mp2020_corrected <= 0（预测正类）",
+      "confusion_matrix": {"TP": 14174, "FP": 91346, "TN": 91200, "FN": 18768},
+      "f1": 0.20473487310597854,
+      "absolute_difference_vs_card": 0.7302651268940215,
+      "is_current_definition": false,
+      "note": "该值对应修订前的参考口径（预测形成能直接对 e_form_mp2020 比较），不是本轮 F1 口径；recheck_evidence.json /previous_summary_f1 的「原参考能公式有误」归因与复算事实相反，已如实登记，不据此改写结论"
+    }
+  },
+  "input_fingerprints": {
+    "wbm_2023_12_13_summary": {
+      "path": "shared/inputs/source/2023-12-13-wbm-summary.csv.gz",
+      "sha256": "adbdd8b24086d4888195d8894c77f6d5fb29ce33bbb5d7d3898b4d79e964dc54",
+      "match": true
+    },
+    "champion_prediction": {
+      "path": "shared/inputs/source/dpa-4.1-max-oam-pft_2026-10-27-discovery.csv.gz",
+      "sha256": "4767371b15c5169106f352e15aa13b0859e83a0f047e17cc822ff3dde42328eb",
+      "match": true
+    },
+    "frozen_stage2": {
+      "freeze.json": "06a52898931c4704f2b90f5274dcfd5d61d9d02d4fc95b620402dfc7fb5d7347",
+      "budget_lists_7tier.json": "d2061c4394553b6e229555a4760296811bf82db6595b7a6d755371b0be94465c",
+      "signoff_S.md": "5a348e7b2858c420a0a4f1255476ab1495b475ddcb4095428097dc359bc4b621",
+      "signoff_C.md": "f89f8f811bfe353ef74385ab9a6a2a804b8d90ab66e70dcc90aca89056610a8e",
+      "S_top20_scored.csv": "8d0a1aee0d2e729d80f0457950ccd874516180405daa92f78dd0f2ee4466c7fa",
+      "C_top20_signoff85f13c0c.csv": "85f13c0c7447b3c7aa9c2de8833841f163c196304f8c2e6f42db65fe276b178a",
+      "total_fingerprint_declared_and_recomputed": "ec146b39eba2d2281761c47cc36a2b6345b3a7cfc6e41af581401915c4b4375f"
+    },
+    "verification_manifest": {
+      "path": "shared/input_verification_v2.json",
+      "sha256": "15be31e136e5112cfc02397aaea6479df5522e14b313b3ff7b2da8ea2eb11d03",
+      "all_match": true
+    }
+  },
+  "artifact_fingerprints": {
+    "shared/recheck_v2.py": "f7ed569ababf6d78ecd14aafb8658f400af0d05244ff2da2747d2591e2a32c88",
+    "shared/f1_run_result.json": "23f24d7acbe2b3ec3c4642be1cde3a576f6177c03d30a31e2b135c60b7df5cef",
+    "shared/f1_hits_detail.csv": "980f1556291892279d17fac832e5fc283c433b8cd55ded364c01272c4fa79d5d",
+    "shared/input_verification_v2.json": "15be31e136e5112cfc02397aaea6479df5522e14b313b3ff7b2da8ea2eb11d03",
+    "shared/independent_check.py": "11d090cf3c8ca7a1721ef70341c70f96e88de48fd8ef1aa813a337c21cfbc817",
+    "shared/independent_review_v2.md": "0faad35ad771ea5fb0aec080d60f1213d007b65d63c384ef90b5bd90189429be"
+  },
+  "independent_recheck": {
+    "run_id": "20261121T065722355893Z",
+    "output_dir": "runs/independent_20261121T065722355893Z",
+    "script": "shared/independent_check.py",
+    "independence_note": "独立重写，未 import / importlib 加载 / 复制 recheck_v2.py 的任何函数",
+    "fields_compared": 9,
+    "fields_identical": 9,
+    "verdict": "全部可复算字段逐位一致，无分歧行",
+    "boundary_sensitivity": "阈值 0 处无精确零行，标签/预测各试 <= 与 < 四格均不变；缺失与重复均 0",
+    "gate_conclusion_in_review": "通过（依据预注册 0.02）",
+    "open_issue_from_review": "冻结 S 名单全池排序与独立全池排序在第 0 位分歧，需子池/体系筛选的书面定义；C 侧因缺 14 个模型预测无法独立重建全部分数"
+  },
+  "scope_declarations": {
+    "rerun_lists": false,
+    "resend_group_message": false,
+    "repeat_stage1_stage2": false,
+    "original_recheck_py_modified": false,
+    "old_artifacts_kept": true,
+    "note": "本轮仅执行 F1 勘误；沿用已冻结的 S、C 名单与 K=20 结果；原冻结回执仅作来源引用"
+  },
+  "mira_member_opinion": {
+    "status": "单独登记，未并入真人签认",
+    "summary": "Mira 成员（程序自检与独立复核脚本这一侧）意见：四格与 F1 在同口径下逐位可复现，预注册门槛通过；同时提示三点——门槛内部容差 0.0005 属贴线通过、0.268762 的登记矩阵与其正文判据不相容、冻结 S 名单子池定义缺失。以上均不改变本轮 F1 结论方向。"
+  },
+  "pending_human_items": [
+    "另一位真人队员在独立环境以 python3 shared/recheck_v2.py --f1-tolerance 0.0005 复跑本项目本轮运行目录（runs/20261121T065233302369Z），核对 n、TP/FP/TN/FN、F1、|Δ| 与本登记逐位一致后签认",
+    "同时以 python3 shared/independent_check.py 独立复算一遍，作为第二重交叉核对",
+    "确认门槛口径：结论按预注册 0.02，0.0005 仅作交叉参考",
+    "补充冻结 S 名单的子池/体系筛选书面定义，并答复独立复核的第 0 位分歧",
+    "如需独立重建 C 侧全体分数，提供 15 模型预测矩阵"
+  ],
+  "upstream_references": {
+    "run_result": "shared/f1_run_result.json",
+    "hits_detail": "shared/f1_hits_detail.csv",
+    "input_verification": "shared/input_verification_v2.json",
+    "independent_review": "shared/independent_review_v2.md",
+    "independent_script": "shared/independent_check.py",
+    "recheck_script": "shared/recheck_v2.py",
+    "report": "shared/final_report_v2.md"
+  }
+}

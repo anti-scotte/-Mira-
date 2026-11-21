@@ -1,0 +1,17 @@
+20261121T065722355893Z | n=215488 TP=30939 FP=2326 TN=180220 FN=2003 | F1=0.9346141646653677 | card_f1=0.935 | |Δ|=0.0003858353346323229 | prereg_passed=True | declared_all_equal=True
+n: declared=215488 independent=215488 equal=True
+tp: declared=30939 independent=30939 equal=True
+fp: declared=2326 independent=2326 equal=True
+tn: declared=180220 independent=180220 equal=True
+fn: declared=2003 independent=2003 equal=True
+f1: declared=0.9346141646653677 independent=0.9346141646653677 equal=True
+absolute_difference: declared=0.0003858353346323229 independent=0.0003858353346323229 equal=True
+card_f1: declared=0.935 independent=0.935 equal=True
+csv_sha256: declared=980f1556291892279d17fac832e5fc283c433b8cd55ded364c01272c4fa79d5d recomputed=980f1556291892279d17fac832e5fc283c433b8cd55ded364c01272c4fa79d5d equal=True
+S[20]: len=20 prefix_ok=False hits=20 hash=c48792e90fbd200b2f6935edac40d89d8a921630cfaa48015169f6f08c94f2a0
+S[50]: len=50 prefix_ok=False hits=49 hash=c10a34bfa12d3cc2bc143b7a82a508149d692a8d43133d28b06832c2d7b64c07
+S[100]: len=100 prefix_ok=False hits=99 hash=da6ccda90bdc8cb4f5aa1bd210ee160e242a3c3705df11153dfbbd78b74026ef
+S[200]: len=200 prefix_ok=False hits=198 hash=7ff62cd657f168b0935de6dc6657275c65ecd1f5d384eed51484aa4302106e17
+S[500]: len=500 prefix_ok=False hits=489 hash=d8c74105b7efb93e859808ea73a9727140ecd0744f3bc0061c5cc6c9a7c3ac8a
+S[1000]: len=1000 prefix_ok=False hits=980 hash=717e411b59533c40baece1360e991dfda9586baa97590703cd951525d71e9cca
+S[2000]: len=2000 prefix_ok=False hits=1935 hash=dea13daaa65b2c3631609e0332091d705b92befe926d2c59f4f5abf77d191d3a

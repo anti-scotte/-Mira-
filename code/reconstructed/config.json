@@ -1,0 +1,39 @@
+{
+  "run_id": "RUN-20261121-STAGE2-01",
+  "program_version": "2.0.0-formal-distance-stage2",
+  "program_file": "rank_formal.py",
+  "authority_order": [
+    "shared/inputs/01_研究协议.md",
+    "shared/inputs/02_运行配置.json",
+    "shared/inputs/model_manifest.json",
+    "本轮启动指令（团队签认，覆盖协议 02 的 S/C 定义与并列/预算口径）"
+  ],
+  "inputs": {
+    "manifest": {"path": "shared/inputs/model_manifest.json", "sha256": "24d5372cadcda6fae24fab5667abe755389b3d2d7d0925f3ab81dff4cd8af0e1"},
+    "pool": {"path": "shared/inputs/unlabeled_candidate_pool.csv", "sha256": "15d796d5d9a93c05794ab40ad5e88f3e8b62c3c884ae79dbc734dbfe3c8d360c"},
+    "reference": {"path": "shared/inputs/reference_hull_energies.csv", "sha256": "f83ca94322c7a86afe43ac6cce8da7aecc374929f31aebb239b59292932df88d"},
+    "protocol": {"path": "shared/inputs/01_研究协议.md", "sha256": "2a792e65a4d32d75f08d3d2c1e98d35a48981b1522f58ead22020fe897e52080"},
+    "run_config_02": {"path": "shared/inputs/02_运行配置.json", "sha256": "85e5455f272e9af272cf9b883bb534ad3e0ee6d02ef31efdd471aa3e525f3b1e"}
+  },
+  "champion": "dpa-4.1-max-oam-pft",
+  "selected_models": "model_manifest.json 中 selected=true 的全部 15 个模型（按 manifest 顺序）",
+  "unlabeled_columns_only": ["material_id", "formula", "<15 个模型预测列，source_col=e_form_per_atom>", "e_ref"],
+  "forbidden_columns": ["e_form_per_atom_mp2020_corrected", "e_above_hull_mp2020_corrected_ppd_mp", "任何 DFT 稳定性真值列"],
+  "score": {
+    "d": "pred_e_form_per_atom - e_ref  (eV/atom, float64)",
+    "S": "冠军模型 dpa-4.1-max-oam-pft 的 d",
+    "C": "每个材料在全部 15 个入选模型 d 上的数值中位数（n=15 为奇数，取排序后第 8 个；n 为偶数时取中间两值算术平均）"
+  },
+  "sort": {
+    "primary": "score ascending",
+    "tie_1": "sha256(\"WBM-oxide-v1|\" + material_id) 十六进制串升序",
+    "tie_2": "material_id 原字符串升序",
+    "tie_definition": "float64 位级相等（==），无容差、无四舍五入"
+  },
+  "budgets_K": [20, 50, 100, 200, 500, 1000, 2000],
+  "budget_rule": "每档为对应策略全排序的严格前缀；K 须为整数且 1<=K<=N",
+  "stable_set_rule": "该策略分数 <= 0 的全部材料（有限值，零值计入，无容差）",
+  "nonfinite_handling": "任一入选模型预测或参考能非有限 → 该材料被两策略共同排除并计数；参考能缺行即报错，不静默缩池",
+  "numpy_dtype": "float64 everywhere",
+  "model_median_note": "按本轮指令用能量（d）的中位数，不用协议 02 的‘名次中位数’；已登记 deviations.md D2"
+}

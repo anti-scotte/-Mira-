@@ -1,0 +1,145 @@
+{
+  "run_id": "20261121T065233302369Z",
+  "run_timestamp_utc": "2026-11-21T06:52:33.302369+00:00",
+  "run_dir": "runs/20261121T065233302369Z",
+  "command": "python3 recheck_v2.py",
+  "script_sha256": "f7ed569ababf6d78ecd14aafb8658f400af0d05244ff2da2747d2591e2a32c88",
+  "published_rerun_command": "python3 shared/recheck_v2.py --f1-tolerance 0.0005",
+  "model": "dpa-4.1-max-oam-pft",
+  "universe": "WBM unique_prototype=True; all chemical systems; join on material_id",
+  "truth_rule": "e_above_hull_mp2020_corrected_ppd_mp <= 0",
+  "predicted_distance_formula": "e_form_per_atom - (e_form_per_atom_mp2020_corrected - e_above_hull_mp2020_corrected_ppd_mp)",
+  "prediction_rule": "predicted_distance <= 0",
+  "f1_formula": "2*TP/(2*TP+FP+FN)",
+  "n": 215488,
+  "tp": 30939,
+  "fp": 2326,
+  "tn": 180220,
+  "fn": 2003,
+  "f1": 0.9346141646653677,
+  "card_f1": 0.935,
+  "absolute_difference": 0.0003858353346323229,
+  "passed": true,
+  "f1_gate": {
+    "rule": "absolute_difference <= tolerance",
+    "tolerance": 0.0005,
+    "default_basis": "half the last displayed model-card unit; historical assertion tolerance not documented in available evidence"
+  },
+  "input_verification": {
+    "manifest": "shared/input_verification_v2.json",
+    "manifest_sha256": "15be31e136e5112cfc02397aaea6479df5522e14b313b3ff7b2da8ea2eb11d03",
+    "all_match": true,
+    "files": {
+      "shared/inputs/source/2023-12-13-wbm-summary.csv.gz": {
+        "expected_sha256": "adbdd8b24086d4888195d8894c77f6d5fb29ce33bbb5d7d3898b4d79e964dc54",
+        "actual_sha256": "adbdd8b24086d4888195d8894c77f6d5fb29ce33bbb5d7d3898b4d79e964dc54",
+        "match": true
+      },
+      "shared/inputs/source/dpa-4.1-max-oam-pft_2026-10-27-discovery.csv.gz": {
+        "expected_sha256": "4767371b15c5169106f352e15aa13b0859e83a0f047e17cc822ff3dde42328eb",
+        "actual_sha256": "4767371b15c5169106f352e15aa13b0859e83a0f047e17cc822ff3dde42328eb",
+        "match": true
+      },
+      "shared/inputs/frozen_stage2/freeze.json": {
+        "expected_sha256": "06a52898931c4704f2b90f5274dcfd5d61d9d02d4fc95b620402dfc7fb5d7347",
+        "actual_sha256": "06a52898931c4704f2b90f5274dcfd5d61d9d02d4fc95b620402dfc7fb5d7347",
+        "match": true
+      },
+      "shared/inputs/frozen_stage2/budget_lists_7tier.json": {
+        "expected_sha256": "d2061c4394553b6e229555a4760296811bf82db6595b7a6d755371b0be94465c",
+        "actual_sha256": "d2061c4394553b6e229555a4760296811bf82db6595b7a6d755371b0be94465c",
+        "match": true
+      },
+      "shared/inputs/frozen_stage2/signoff_S.md": {
+        "expected_sha256": "5a348e7b2858c420a0a4f1255476ab1495b475ddcb4095428097dc359bc4b621",
+        "actual_sha256": "5a348e7b2858c420a0a4f1255476ab1495b475ddcb4095428097dc359bc4b621",
+        "match": true
+      },
+      "shared/inputs/frozen_stage2/signoff_C.md": {
+        "expected_sha256": "f89f8f811bfe353ef74385ab9a6a2a804b8d90ab66e70dcc90aca89056610a8e",
+        "actual_sha256": "f89f8f811bfe353ef74385ab9a6a2a804b8d90ab66e70dcc90aca89056610a8e",
+        "match": true
+      },
+      "shared/inputs/frozen_stage2/S_top20_scored.csv": {
+        "expected_sha256": "8d0a1aee0d2e729d80f0457950ccd874516180405daa92f78dd0f2ee4466c7fa",
+        "actual_sha256": "8d0a1aee0d2e729d80f0457950ccd874516180405daa92f78dd0f2ee4466c7fa",
+        "match": true
+      },
+      "shared/inputs/frozen_stage2/C_top20_signoff85f13c0c.csv": {
+        "expected_sha256": "85f13c0c7447b3c7aa9c2de8833841f163c196304f8c2e6f42db65fe276b178a",
+        "actual_sha256": "85f13c0c7447b3c7aa9c2de8833841f163c196304f8c2e6f42db65fe276b178a",
+        "match": true
+      }
+    }
+  },
+  "frozen_hit_rule": "Frozen list membership joined to original WBM by material_id; hit iff e_above_hull_mp2020_corrected_ppd_mp <= 0",
+  "frozen_hits_by_budget": {
+    "20": {
+      "S_hits": 20,
+      "C_hits": 20,
+      "C_minus_S": 0,
+      "absolute_hit_difference": 0,
+      "both_hit": 18,
+      "only_S_hit": 2,
+      "only_C_hit": 2
+    },
+    "50": {
+      "S_hits": 49,
+      "C_hits": 50,
+      "C_minus_S": 1,
+      "absolute_hit_difference": 1,
+      "both_hit": 49,
+      "only_S_hit": 0,
+      "only_C_hit": 1
+    },
+    "100": {
+      "S_hits": 99,
+      "C_hits": 99,
+      "C_minus_S": 0,
+      "absolute_hit_difference": 0,
+      "both_hit": 96,
+      "only_S_hit": 3,
+      "only_C_hit": 3
+    },
+    "200": {
+      "S_hits": 198,
+      "C_hits": 199,
+      "C_minus_S": 1,
+      "absolute_hit_difference": 1,
+      "both_hit": 196,
+      "only_S_hit": 2,
+      "only_C_hit": 3
+    },
+    "500": {
+      "S_hits": 489,
+      "C_hits": 490,
+      "C_minus_S": 1,
+      "absolute_hit_difference": 1,
+      "both_hit": 481,
+      "only_S_hit": 8,
+      "only_C_hit": 9
+    },
+    "1000": {
+      "S_hits": 980,
+      "C_hits": 982,
+      "C_minus_S": 2,
+      "absolute_hit_difference": 2,
+      "both_hit": 972,
+      "only_S_hit": 8,
+      "only_C_hit": 10
+    },
+    "2000": {
+      "S_hits": 1935,
+      "C_hits": 1946,
+      "C_minus_S": 11,
+      "absolute_hit_difference": 11,
+      "both_hit": 1909,
+      "only_S_hit": 26,
+      "only_C_hit": 37
+    }
+  },
+  "hits_detail_file": "f1_hits_detail.csv",
+  "hits_detail_sha256": "980f1556291892279d17fac832e5fc283c433b8cd55ded364c01272c4fa79d5d",
+  "stdout_file": "stdout.log",
+  "report_summary": "20261121T065233302369Z | n=215488 | TP=30939 FP=2326 TN=180220 FN=2003 | F1=0.9346141646653677 | card_f1=0.935 | absolute_difference=0.0003858353346323229 | passed=true | K=20 S=20 C=20 C−S=0"
+}

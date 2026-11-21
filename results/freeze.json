@@ -1,0 +1,125 @@
+{
+ "schema": "freeze_v1",
+ "run_id": "RUN-20261121-STAGE2-01",
+ "run_dir": "runs/2026-11-21_stage2_formal/",
+ "run_version": "2.0.0-formal-distance-stage2",
+ "frozen_at": "2026-11-21T12:37:57.721321+08:00",
+ "frozen_by": "Lead（负责人）",
+ "blind_state": "冻结前盲态保持；未读取 e_above_hull_mp2020_corrected_ppd_mp 或 e_form_per_atom_mp2020_corrected 的任何取值",
+ "pool": {
+  "candidates": 23821,
+  "unique_material_id": 23821,
+  "models_selected": 15,
+  "champion": "dpa-4.1-max-oam-pft"
+ },
+ "protocol": {
+  "S": "冠军模型 dpa-4.1-max-oam-pft 的预测凸包距离 d = 预测形成能/原子 − e_ref，升序取前20",
+  "C": "对每个材料取全部15个入选模型 d 的数值中位数，升序取前20",
+  "arith": "binary64 / float64，不四舍五入",
+  "tie": "分数升序 + sha256('WBM-oxide-v1|'+material_id) 十六进制升序 + material_id 升序",
+  "tiers": "20/50/100/200/500/1000/2000",
+  "stable": "策略分数 ≤ 0（含零，无容差）",
+  "NaN": "仅当某模型该材料预测缺失/非有限时两策略共同排除；本池 0 行被排除"
+ },
+ "signoffs": {
+  "S": "shared/stage2_run/signoff_S.md",
+  "C": "shared/stage2_run/signoff_C.md",
+  "both_present": true
+ },
+ "open_deviations": [
+  "C 用能量中位数（协议02原文为名次中位数，前20交集20/20）",
+  "七档档位为启动指令给出，01/02未定义",
+  "预测稳定集合定义在输入中缺失，本轮采用分数≤0",
+  "历史前20名单不可取得，事后对照未执行"
+ ],
+ "files": [
+  {
+   "path": "shared/inputs/model_manifest.json",
+   "role": "input",
+   "sha256": "24d5372cadcda6fae24fab5667abe755389b3d2d7d0925f3ab81dff4cd8af0e1",
+   "bytes": 45412
+  },
+  {
+   "path": "shared/inputs/unlabeled_candidate_pool.csv",
+   "role": "input",
+   "sha256": "15d796d5d9a93c05794ab40ad5e88f3e8b62c3c884ae79dbc734dbfe3c8d360c",
+   "bytes": 4359998
+  },
+  {
+   "path": "shared/inputs/reference_hull_energies.csv",
+   "role": "input",
+   "sha256": "f83ca94322c7a86afe43ac6cce8da7aecc374929f31aebb239b59292932df88d",
+   "bytes": 578613
+  },
+  {
+   "path": "shared/stage2_run/source_and_config_manifest.md",
+   "role": "stage2_artifact",
+   "sha256": "0c16673ff68d6dd8f8ca9bcfe3c673aa22c436c0e9258009875446db36722fc1",
+   "bytes": 11515
+  },
+  {
+   "path": "shared/stage2_run/synthetic_test_evidence.json",
+   "role": "stage2_artifact",
+   "sha256": "92784a14c367742ffab5ea479d6b4d45e41f2276558f6fb40fc2a3757bdd72ec",
+   "bytes": 12554
+  },
+  {
+   "path": "shared/stage2_run/full_ranking_S.csv",
+   "role": "stage2_artifact",
+   "sha256": "0672bfad399c444ff04cc98ba12a4053df06b6c428d56ef8e370d6f2009d27da",
+   "bytes": 2755365
+  },
+  {
+   "path": "shared/stage2_run/full_ranking_C.csv",
+   "role": "stage2_artifact",
+   "sha256": "ef1d523992980f8159c06b06116029329e33393adbe782da07ca71e2bd1b7c16",
+   "bytes": 2757209
+  },
+  {
+   "path": "shared/stage2_run/budget_lists_7tier.json",
+   "role": "stage2_artifact",
+   "sha256": "d2061c4394553b6e229555a4760296811bf82db6595b7a6d755371b0be94465c",
+   "bytes": 162895
+  },
+  {
+   "path": "shared/stage2_run/stable_sets.json",
+   "role": "stage2_artifact",
+   "sha256": "084f99aafb931335364a430545cf09e04b33d6ebfa73e3e01ad772964b489bed",
+   "bytes": 127050
+  },
+  {
+   "path": "shared/stage2_run/signoff_S.md",
+   "role": "stage2_artifact",
+   "sha256": "5a348e7b2858c420a0a4f1255476ab1495b475ddcb4095428097dc359bc4b621",
+   "bytes": 6317
+  },
+  {
+   "path": "shared/stage2_run/deviations.md",
+   "role": "stage2_artifact",
+   "sha256": "e669efef56400ba553730468c992cad4b7942a031303f9209a0fef0c21e94500",
+   "bytes": 9112
+  },
+  {
+   "path": "shared/stage2_run/independent_check_C.md",
+   "role": "stage2_artifact",
+   "sha256": "cfbbf65b6875276884ca73f30bc332f6505eec9bbf45ca25dcffaf58a873be66",
+   "bytes": 11198
+  },
+  {
+   "path": "shared/stage2_run/diff_C_vs_archive.json",
+   "role": "stage2_artifact",
+   "sha256": "df867f9645de9db4fd8607235c72daf0143be27c98dc30515518f5264b5242d5",
+   "bytes": 8172
+  },
+  {
+   "path": "shared/stage2_run/signoff_C.md",
+   "role": "stage2_artifact",
+   "sha256": "f89f8f811bfe353ef74385ab9a6a2a804b8d90ab66e70dcc90aca89056610a8e",
+   "bytes": 4373
+  }
+ ],
+ "total_fingerprint": {
+  "method": "sha256 over sorted lines '<path> <sha256>'",
+  "value": "ec146b39eba2d2281761c47cc36a2b6345b3a7cfc6e41af581401915c4b4375f"
+ }
+}
