@@ -1,6 +1,8 @@
 # 【B·组会前一晚｜材料科学】有限预算下预测模型的决策组
 
-**Demo** · [Mira 专家团配置分享](https://mira.deepprinciple.com/share/squad/AxwpQbyTNdJFOio7SuXWrw)　**现场复算** · [下载含两份原始输入的独立工作空间](workflow/指标敏感性专家团/四环节独立复验工作空间.zip)
+**Demo** · [Mira 专家团配置分享](https://mira.deepprinciple.com/share/squad/txWEoOX5YRIy3Bx8zEXUtQ)　**现场复算** · [下载含两份原始输入的独立工作空间](workflow/指标敏感性专家团/四环节独立复验工作空间.zip)
+
+**作品对话分享** · 冻结名单复验（vkbyw0ev）与 DAF 扩展（zzqvuo1g）的公开对话链接待生成。当前 Demo 链接可打开四环节专家团配置。
 
 评审导读：[历史溯源与版本沿革](docs/历史溯源与版本沿革.md) · [术语与判定口径](docs/术语与判定口径.md)
 
@@ -12,7 +14,8 @@
 |---|---|---|
 | 主实验与方向一修订已完成 | 前 20 共同入选 18 个，两侧独选各 2 个且均命中。修正预测距离换算后，冠军 F1 为 0.9346141647。 | [方向一修订终稿](evidence/reviews/direction1-v2/final_report_v2.md) · [研究报告](docs/研究报告.md) |
 | 队友独立复算 R1 已完成 | 独立会话沿用冻结名单，从原始文件复算冠军 F1 和七档命中。K=20 两侧均为 20/20；K=2000 共识 1946、单模型 1935。 | [R1 复核摘要](evidence/reviews/teammate-r1/复核摘要.md) · [七档计数](evidence/reviews/teammate-r1/tier_summary.csv) · [队友填写的签认](evidence/reviews/teammate-r1/02_真人签认_本人填写.txt) |
-| 固定工作流复跑 R2 | 揭晓后再次得到主实验七档计数；预检已读取 reference，环节③受理登记受阻。 | [R2 输出与证据边界](evidence/reviews/replay-r2/) |
+| 队友独立复验 R2 | 傅誉发起独立会话并实名签认，56 项对照一致，冻结名单复算约 16 分钟。 | [会话说明与签认原件](evidence/reviews/teammate-r2/) |
+| 组长四环节复跑 | 揭晓后再次得到主实验七档计数；预检已读取 reference，环节③受理登记受阻。 | [四环节输出与证据边界](evidence/reviews/four-stage-replay/) |
 | 事后扩展 · DAF | 换指标后，20 个名额换 1 项且仍为 20/20；2000 个名额比原单模型多中 4 项。 | [队友扩展七档结果](evidence/reviews/extension-daf/) |
 
 R1 验证的是冻结后的揭晓和计数。从已交接盲表重排的检查见下方复跑说明；方向一审核使用全体系 215,488 项排序，冻结名单取 23,821 项含氧共同池。R1 从原始 WBM 识别的含氧 ID 集合与盲表完全相同，详见 R1 摘要第五节。

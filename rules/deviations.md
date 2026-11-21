@@ -15,4 +15,4 @@
 
 原第三阶段使用预测形成能减 DFT 形成能作为预测距离，得到 F1 约 0.2047。修订用 DFT 形成能减 DFT 凸包距离得到参考能，再用预测形成能减参考能。真实稳定标签始终取 DFT 凸包距离 ≤ 0。旧程序及摘要在 evidence/superseded，原修订脚本在 code/revision，便携复算入口为 code/recount.py。冻结名单沿用。方向一首轮审查对 F1 存在异议；第二轮留存新脚本、两次独立实现的运行记录及综合终稿，见 evidence/reviews/direction1-v2。方向一第二轮按全体系 215,488 个独特原型复算，主算与 Mira 独立复核脚本均得到 F1=0.9346141647，与模型卡 0.935 相差 0.000386，满足预注册门槛 0.02。当时尚待真人复核；随后队友在独立会话 R1 完成核算，见[签认与复核摘要](../evidence/reviews/teammate-r1/复核摘要.md)。签认“你好”为队友群昵称。按此次交接说明，脚本在队友发起的 Mira 会话中由 AI 成员执行，队友核对输出；未取得其另在个人电脑运行的凭证。原签认保留。
 
-[R2](../evidence/reviews/replay-r2/) 为揭晓后复跑，预检读取过 reference。[DAF 扩展](../evidence/reviews/extension-daf/) 单独归档。本次文档修订沿用冻结规则、名单与计数。
+[组长四环节复跑](../evidence/reviews/four-stage-replay/) 为揭晓后复跑，预检读取过 reference。[DAF 扩展](../evidence/reviews/extension-daf/) 单独归档。本次文档修订沿用冻结规则、名单与计数。
