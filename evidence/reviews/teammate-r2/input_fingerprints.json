@@ -1,0 +1,33 @@
+{
+ "fingerprints": [
+  {
+   "path": "raw/64706751.gz",
+   "measured_sha256": "adbdd8b24086d4888195d8894c77f6d5fb29ce33bbb5d7d3898b4d79e964dc54",
+   "expected_sha256_sums": "adbdd8b24086d4888195d8894c77f6d5fb29ce33bbb5d7d3898b4d79e964dc54",
+   "match_sums": true
+  },
+  {
+   "path": "raw/70836372.gz",
+   "measured_sha256": "4767371b15c5169106f352e15aa13b0859e83a0f047e17cc822ff3dde42328eb",
+   "expected_sha256_sums": "4767371b15c5169106f352e15aa13b0859e83a0f047e17cc822ff3dde42328eb",
+   "match_sums": true
+  },
+  {
+   "path": "results/freeze.json",
+   "measured_sha256": "06a52898931c4704f2b90f5274dcfd5d61d9d02d4fc95b620402dfc7fb5d7347",
+   "expected_sha256_sums": "06a52898931c4704f2b90f5274dcfd5d61d9d02d4fc95b620402dfc7fb5d7347",
+   "match_sums": true
+  },
+  {
+   "path": "results/budget_lists_7tier.json",
+   "measured_sha256": "d2061c4394553b6e229555a4760296811bf82db6595b7a6d755371b0be94465c",
+   "expected_sha256_sums": "d2061c4394553b6e229555a4760296811bf82db6595b7a6d755371b0be94465c",
+   "match_sums": true
+  }
+ ],
+ "sums_all_ok": true,
+ "budget_lists_freeze_expected": "d2061c4394553b6e229555a4760296811bf82db6595b7a6d755371b0be94465c",
+ "budget_lists_measured": "d2061c4394553b6e229555a4760296811bf82db6595b7a6d755371b0be94465c",
+ "match": true,
+ "freeze_run_id": "RUN-20261121-STAGE2-01"
+}

@@ -1,0 +1,60 @@
+S@20 hits                          mine=20                     ref=20                     OK
+C@20 hits                          mine=20                     ref=20                     OK
+D@20 (C-S)                         mine=0                      ref=0                      OK
+S@50 hits                          mine=49                     ref=49                     OK
+C@50 hits                          mine=50                     ref=50                     OK
+D@50 (C-S)                         mine=1                      ref=1                      OK
+S@100 hits                         mine=99                     ref=99                     OK
+C@100 hits                         mine=99                     ref=99                     OK
+D@100 (C-S)                        mine=0                      ref=0                      OK
+S@200 hits                         mine=198                    ref=198                    OK
+C@200 hits                         mine=199                    ref=199                    OK
+D@200 (C-S)                        mine=1                      ref=1                      OK
+S@500 hits                         mine=489                    ref=489                    OK
+C@500 hits                         mine=490                    ref=490                    OK
+D@500 (C-S)                        mine=1                      ref=1                      OK
+S@1000 hits                        mine=980                    ref=980                    OK
+C@1000 hits                        mine=982                    ref=982                    OK
+D@1000 (C-S)                       mine=2                      ref=2                      OK
+S@2000 hits                        mine=1935                   ref=1935                   OK
+C@2000 hits                        mine=1946                   ref=1946                   OK
+D@2000 (C-S)                       mine=11                     ref=11                     OK
+
+-- 文档 §四 七档表解析 --
+doc S@20                           mine=20                     ref=20                     OK
+doc C@20                           mine=20                     ref=20                     OK
+doc D@20                           mine=0                      ref=0                      OK
+doc S@50                           mine=49                     ref=49                     OK
+doc C@50                           mine=50                     ref=50                     OK
+doc D@50                           mine=1                      ref=1                      OK
+doc S@100                          mine=99                     ref=99                     OK
+doc C@100                          mine=99                     ref=99                     OK
+doc D@100                          mine=0                      ref=0                      OK
+doc S@200                          mine=198                    ref=198                    OK
+doc C@200                          mine=199                    ref=199                    OK
+doc D@200                          mine=1                      ref=1                      OK
+doc S@500                          mine=489                    ref=489                    OK
+doc C@500                          mine=490                    ref=490                    OK
+doc D@500                          mine=1                      ref=1                      OK
+doc S@1000                         mine=980                    ref=980                    OK
+doc C@1000                         mine=982                    ref=982                    OK
+doc D@1000                         mine=2                      ref=2                      OK
+doc S@2000                         mine=1935                   ref=1935                   OK
+doc C@2000                         mine=1946                   ref=1946                   OK
+doc D@2000                         mine=11                     ref=11                     OK
+K20 only_S ids                     mine=['wbm-1-38115', 'wbm-1-36714'] ref=['wbm-1-38115', 'wbm-1-36714'] OK
+K20 only_C ids                     mine=['wbm-3-52495', 'wbm-2-35012'] ref=['wbm-3-52495', 'wbm-2-35012'] OK
+K20 both_hit                       mine=18                     ref=18                     OK
+F1 TP                              mine=30939                  ref=30939                  OK
+F1 FP                              mine=2326                   ref=2326                   OK
+F1 FN                              mine=2003                   ref=2003                   OK
+F1 TN                              mine=180220                 ref=180220                 OK
+n universe                         mine=215488                 ref=215488                 OK
+positives_truth                    mine=32942                  ref=32942                  OK
+positives_pred                     mine=33265                  ref=33265                  OK
+F1 (float, tolerance 1e-15)        mine=True                   ref=True                   OK
+|F1-0.935| (tolerance 1e-15)       mine=True                   ref=True                   OK
+gate_pass                          mine=True                   ref=True                   OK
+oxide count                        mine=23821                  ref=23821                  OK
+
+首个不一致项: 无

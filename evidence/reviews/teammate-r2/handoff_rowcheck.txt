@@ -1,0 +1,14 @@
+外层 shared/outputs/S20.csv 列: strategy,rank,material_id,e_above_hull_mp2020_corrected_ppd_mp,hit
+外层 shared/outputs/C20.csv 列: strategy,rank,material_id,formula,dft_hull_eV_per_atom,hit_hull_le_0
+行数 S20=20 C20=40
+S20 与本人逐行 20 行一致: True
+C20 外层第1-20行 material_id 是否等于 S 名单原序: True
+C20 外层第21-40行 material_id 是否等于 C 名单原序: True
+
+按冻结名单原序逐名次核对：
+  S20.csv 20 名次 ID == 冻结 S@20 原序 : True | strategy 值: {'S'}
+  C20.csv 第1-20行 ID == 冻结 S@20 原序 : True
+  C20.csv 第21-40行 ID == 冻结 C@20 原序 : True
+  C20.csv 全部 40 行 strategy 值= {'C', 'S'} (标签与第21-40行实际为 C 名单不符)
+  C20.csv 行数= 40 (应为 20)
+结论：外层 C20.csv 的数值/顺序与冻结名单逐行一致；缺陷在容器结构（S 段+C 段拼接、行内策略标签恒为 S）。

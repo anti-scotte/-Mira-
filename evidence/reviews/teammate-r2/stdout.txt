@@ -1,0 +1,91 @@
+=== 0) 运行环境 ===
+python 3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]
+cwd /app/workspaces/d9bb7acab5a4/projects/1f1acf5a87/sessions/ats-82f496ee1c72c2bd83f488c987577d3b/work/队友复验工作空间
+
+=== 1) 输入指纹核验（SHA256SUMS.txt + freeze.json）===
+SHA256SUMS.txt 条目数: 18
+  raw/64706751.gz                          adbdd8b24086d4888195d8894c77f6d5fb29ce33bbb5d7d3898b4d79e964dc54  SUMS=adbdd8b24086d4888195d8894c77f6d5fb29ce33bbb5d7d3898b4d79e964dc54  match=True
+  raw/70836372.gz                          4767371b15c5169106f352e15aa13b0859e83a0f047e17cc822ff3dde42328eb  SUMS=4767371b15c5169106f352e15aa13b0859e83a0f047e17cc822ff3dde42328eb  match=True
+  results/freeze.json                      06a52898931c4704f2b90f5274dcfd5d61d9d02d4fc95b620402dfc7fb5d7347  SUMS=06a52898931c4704f2b90f5274dcfd5d61d9d02d4fc95b620402dfc7fb5d7347  match=True
+  results/budget_lists_7tier.json          d2061c4394553b6e229555a4760296811bf82db6595b7a6d755371b0be94465c  SUMS=d2061c4394553b6e229555a4760296811bf82db6595b7a6d755371b0be94465c  match=True
+  SUMS 全量: 18/18 一致
+  budget_lists_7tier.json 实测 d2061c4394553b6e229555a4760296811bf82db6595b7a6d755371b0be94465c (162895 B)
+  freeze.json 登记值        d2061c4394553b6e229555a4760296811bf82db6595b7a6d755371b0be94465c (162895 B)
+  指纹一致: True ; 字节数一致: True
+  freeze run_id=RUN-20261121-STAGE2-01 version=2.0.0-formal-distance-stage2 champion=dpa-4.1-max-oam-pft candidates=23821
+
+=== 2) 读两份 gzip 并按 material_id 对齐（标准库 gzip/csv）===
+  WBM 数据行 256963, 唯一 ID 256963, 重复 0, hull 空 0, hull 非有限 0
+  预测 数据行 256963, 重复 0, 缺失/非有限 0
+  对齐: 交集 256963, WBM 独有 0, 预测独有 0
+
+=== 3) 冠军 dpa-4.1-max-oam-pft 程序自检：全体系 unique_prototype=True ===
+  unique_prototype=True 行数: 215488 (预期 215488) -> True
+  参与计算 215488, 因缺失/非有限跳过 0, 预测距离恰为 0 的行 0
+  TP=30939 FP=2326 FN=2003 TN=180220 sum=215488
+  precision=0.9300766571471517 recall=0.9391961629530691
+  F1=0.9346141646653678  card=0.935  |diff|=0.0003858353346322  gate(|diff|<=0.02)=True margin=0.0196141646653678
+  边界敏感性（一致数）：{'truth_le_pred_lt_agree': 211159, 'truth_lt_pred_lt_agree': 211159, 'truth_lt_pred_le_agree': 211159}
+  unique_prototype=True 且含 O（含≥1种其他元素）：23821 (预期 23821) -> True
+
+=== 4) 只按 results/budget_lists_7tier.json 冻结有序名单逐档计数 ===
+  version=2.0.0-formal-distance-stage2 budgets=[20, 50, 100, 200, 500, 1000, 2000]
+  结构检查（长度/唯一/前缀嵌套）: {"S@20": {"n": 20, "len_ok": true, "unique": true, "prefix_of_smaller": true}, "S@50": {"n": 50, "len_ok": true, "unique": true, "prefix_of_smaller": true}, "S@100": {"n": 100, "len_ok": true, "unique": true, "prefix_of_smaller": true}, "S@200": {"n": 200, "len_ok": true, "unique": true, "prefix_of_smaller": true}, "S@500": {"n": 500, "len_ok": true, "unique": true, "prefix_of_smaller": true}, "S@1000": {"n": 1000, "len_ok": true, "unique": true, "prefix_of_smaller": true}, "S@2000": {"n": 2000, "len_ok": true, "unique": true, "prefix_of_smaller": true}, "C@20": {"n": 20, "len_ok": true, "unique": true, "prefix_of_smaller": true}, "C@50": {"n": 50, "len_ok": true, "unique": true, "prefix_of_smaller": true}, "C@100": {"n": 100, "len_ok": true, "unique": true, "prefix_of_smaller": true}, "C@200": {"n": 200, "len_ok": true, "unique": true, "prefix_of_smaller": true}, "C@500": {"n": 500, "len_ok": true, "unique": true, "prefix_of_smaller": true}, "C@1000": {"n": 1000, "len_ok": true, "unique": true, "prefix_of_smaller": true}, "C@2000": {"n": 2000, "len_ok": true, "unique": true, "prefix_of_smaller": true}}
+  K=20    S 20/20  C 20/20  D=+0  common 18(18)  S_only 2(2)  C_only 2(2)  identity=True
+  K=50    S 49/50  C 50/50  D=+1  common 49(49)  S_only 1(0)  C_only 1(1)  identity=True
+  K=100   S 99/100  C 99/100  D=+0  common 97(96)  S_only 3(3)  C_only 3(3)  identity=True
+  K=200   S 198/200  C 199/200  D=+1  common 197(196)  S_only 3(2)  C_only 3(3)  identity=True
+  K=500   S 489/500  C 490/500  D=+1  common 491(481)  S_only 9(8)  C_only 9(9)  identity=True
+  K=1000  S 980/1000  C 982/1000  D=+2  common 990(972)  S_only 10(8)  C_only 10(10)  identity=True
+  K=2000  S 1935/2000  C 1946/2000  D=+11  common 1960(1909)  S_only 40(26)  C_only 40(37)  identity=True
+
+=== 5) 前 20 逐行（策略/名次/材料ID/原始DFT凸包距离/命中）===
+  S  1 wbm-3-56891    F4 O4 Pa4               -1.512202  hit=1
+  S  2 wbm-2-37232    Gd2 I2 O2               -0.491374  hit=1
+  S  3 wbm-1-44497    O1 P2 Yb4               -0.438474  hit=1
+  S  4 wbm-2-37233    Gd2 I2 O2               -0.418737  hit=1
+  S  5 wbm-3-52496    O4 Pa1 Sr1              -0.404764  hit=1
+  S  6 wbm-2-36457    O7 P2 Yb2               -0.383428  hit=1
+  S  7 wbm-1-38113    As8 O24 Rb8             -0.370050  hit=1
+  S  8 wbm-3-51794    Ca1 O4 Pa1              -0.366256  hit=1
+  S  9 wbm-1-38114    As4 O12 Rb4             -0.361248  hit=1
+  S 10 wbm-1-38112    As4 O12 Rb4             -0.356587  hit=1
+  S 11 wbm-2-35085    O4 Pu1 Yb1              -0.349978  hit=1
+  S 12 wbm-3-51751    Ba1 O4 Pa1              -0.366142  hit=1
+  S 13 wbm-1-38115    As2 O6 Rb2              -0.347437  hit=1
+  S 14 wbm-4-25523    Ir1 O4 Rb3              -0.339171  hit=1
+  S 15 wbm-1-41362    O8 S2 Yb2               -0.336638  hit=1
+  S 16 wbm-2-35084    Np1 O4 Yb1              -0.333282  hit=1
+  S 17 wbm-1-40397    Ca1 O4 Pu1              -0.312727  hit=1
+  S 18 wbm-4-26594    Ba2 Fe1 O6 Pa1          -0.008852  hit=1
+  S 19 wbm-1-37590    O4 Pt2 Rb2              -0.309811  hit=1
+  S 20 wbm-1-36714    Cs2 O4 Pt2              -0.310120  hit=1
+  -> outputs/S_top20_scored.csv (20/20 命中)
+  C  1 wbm-3-56891    F4 O4 Pa4               -1.512202  hit=1
+  C  2 wbm-2-37232    Gd2 I2 O2               -0.491374  hit=1
+  C  3 wbm-1-44497    O1 P2 Yb4               -0.438474  hit=1
+  C  4 wbm-2-37233    Gd2 I2 O2               -0.418737  hit=1
+  C  5 wbm-3-52496    O4 Pa1 Sr1              -0.404764  hit=1
+  C  6 wbm-2-36457    O7 P2 Yb2               -0.383428  hit=1
+  C  7 wbm-3-51794    Ca1 O4 Pa1              -0.366256  hit=1
+  C  8 wbm-1-38113    As8 O24 Rb8             -0.370050  hit=1
+  C  9 wbm-1-38114    As4 O12 Rb4             -0.361248  hit=1
+  C 10 wbm-1-38112    As4 O12 Rb4             -0.356587  hit=1
+  C 11 wbm-3-51751    Ba1 O4 Pa1              -0.366142  hit=1
+  C 12 wbm-2-35085    O4 Pu1 Yb1              -0.349978  hit=1
+  C 13 wbm-4-25523    Ir1 O4 Rb3              -0.339171  hit=1
+  C 14 wbm-1-41362    O8 S2 Yb2               -0.336638  hit=1
+  C 15 wbm-2-35084    Np1 O4 Yb1              -0.333282  hit=1
+  C 16 wbm-1-40397    Ca1 O4 Pu1              -0.312727  hit=1
+  C 17 wbm-4-26594    Ba2 Fe1 O6 Pa1          -0.008852  hit=1
+  C 18 wbm-1-37590    O4 Pt2 Rb2              -0.309811  hit=1
+  C 19 wbm-3-52495    Np1 O4 Sr1              -0.309271  hit=1
+  C 20 wbm-2-35012    Np1 O4 Sr1              -0.303640  hit=1
+  -> outputs/C_top20_scored.csv (20/20 命中)
+
+=== 6) 主指标 ===
+  Hits@20(S) = 20 ; Hits@20(C) = 20 ; D20 = +0 (= C 独有命中 2 − S 独有命中 2)
+  K=20 S 独有 ID（原序）: ['wbm-1-38115', 'wbm-1-36714']
+  K=20 C 独有 ID（原序）: ['wbm-3-52495', 'wbm-2-35012']
+
+耗时 4.0 s

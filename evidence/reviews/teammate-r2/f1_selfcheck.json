@@ -1,0 +1,26 @@
+{
+ "n_universe": 215488,
+ "n_used": 215488,
+ "skipped": 0,
+ "TP": 30939,
+ "FP": 2326,
+ "FN": 2003,
+ "TN": 180220,
+ "positives_truth": 32942,
+ "positives_pred": 33265,
+ "precision": 0.9300766571471517,
+ "recall": 0.9391961629530691,
+ "f1": 0.9346141646653678,
+ "card_f1": 0.935,
+ "abs_diff": 0.00038583533463221187,
+ "gate": "abs(F1-card)<=0.02",
+ "gate_pass": true,
+ "margin": 0.01961416466536779,
+ "exact_zero_pred_distance": 0,
+ "boundary_sensitivity": {
+  "truth_le_pred_lt_agree": 211159,
+  "truth_lt_pred_lt_agree": 211159,
+  "truth_lt_pred_le_agree": 211159
+ },
+ "oxide_unique_prototype_count": 23821
+}

@@ -1,12 +1,19 @@
 # 【B·组会前一晚｜材料科学】有限预算下预测模型的决策组
 
-**Demo** · [Mira 专家团配置分享](https://mira.deepprinciple.com/share/squad/op-KMLkP0tnMdrHwAbh3GQ)　**现场复算** · [下载含两份原始输入的独立工作空间](https://github.com/anti-scotte/-Mira-/releases/download/v1.0.2-review/independent-reproduction.zip)
+**Demo** · [Mira 专家团配置分享](https://mira.deepprinciple.com/share/squad/op-KMLkP0tnMdrHwAbh3GQ)　**现场复算** · [下载含两份原始输入的独立工作空间](https://github.com/anti-scotte/-Mira-/releases/download/v1.0.3-final/independent-reproduction.zip)
 
 复验包默认同时执行主实验与指标子实验。从 Lead 实际开始执行起共用 60 分钟，两项结果分别输出；到时交付已完成部分及缺项。
 
 [主实验包](https://github.com/anti-scotte/-Mira-/releases/download/v1.0.2-review/main-experiment.zip) · [包内使用说明](workflow/指标敏感性专家团/README.md) · [仓库备用下载](https://raw.githubusercontent.com/anti-scotte/-Mira-/main/workflow/指标敏感性专家团/四环节独立复验工作空间.zip)
 
-**作品对话分享** · 冻结名单复验（vkbyw0ev）与 DAF 扩展（zzqvuo1g）的公开对话链接待生成。当前 Demo 链接可打开四环节专家团配置。
+**评委演示** · [傅誉独立复算：56 项对照与 F1](https://mirascience.cn/share/sessions/oSc5HRRT) · [DAF 扩展及审核边界](https://mirascience.cn/share/sessions/ETdkb4Nn) · [R2 原始产物与签认](evidence/reviews/teammate-r2/)
+
+| 四环节版本 | 配置与作品对话 | 运行结果 |
+|---|---|---|
+| 原整合版 · 过程展示 | [原配置](https://mira.deepprinciple.com/share/squad/txWEoOX5YRIy3Bx8zEXUtQ) · [固定工作流会话](https://mirascience.cn/share/sessions/Oh5ZoaXU) | 主实验两岗数值一致，环节③受理阻塞，选择交付当前结果，会话末尾列出 12 个文件。 |
+| 最终复验包 · 新运行入口 | [新版配置](https://mira.deepprinciple.com/share/squad/op-KMLkP0tnMdrHwAbh3GQ) · [双实验会话](https://mirascience.cn/share/sessions/IKh_9DGF) | 主实验七档吻合，扩展差集等式 28/28 成立；平台回执三次未通过，接受部分结果并结束。 |
+
+**F1 勘误过程** · [原主实验自检未过](https://mirascience.cn/share/sessions/qxBd4E3R) → [新窗口方向一复算与勘误](https://mirascience.cn/share/sessions/gFeCUcZE) → [问题日志与证据](docs/Mira运行停止与应对记录.md)
 
 评审导读：[历史溯源与版本沿革](docs/历史溯源与版本沿革.md) · [术语与判定口径](docs/术语与判定口径.md)
 

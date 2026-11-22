@@ -1,0 +1,14 @@
+{
+ "note": "本文件在打开 reference/ 任何文件之前写入，用于证明计算先于对照。",
+ "written_utc": "2026-11-21T12:05:08Z",
+ "own_results": {
+  "hits20_S": 20, "hits20_C": 20, "D20": 0,
+  "S_tiers": [20,49,99,198,489,980,1935],
+  "C_tiers": [20,50,99,199,490,982,1946],
+  "S_only_ids_20": ["wbm-1-38115","wbm-1-36714"],
+  "C_only_ids_20": ["wbm-3-52495","wbm-2-35012"],
+  "unique_prototype_true_n": 215488,
+  "f1": {"TP":30939,"FP":2326,"FN":2003,"TN":180220,"F1":0.9346141646653678,"abs_diff":0.00038583533463221187,"gate_pass": true},
+  "oxide_pool_unique_prototype_with_O": 23821
+ }
+}

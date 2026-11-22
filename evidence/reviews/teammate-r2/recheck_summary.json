@@ -1,0 +1,75 @@
+{
+ "hits20_S": 20,
+ "hits20_C": 20,
+ "D20": 0,
+ "S_tiers": [
+  20,
+  49,
+  99,
+  198,
+  489,
+  980,
+  1935
+ ],
+ "C_tiers": [
+  20,
+  50,
+  99,
+  199,
+  490,
+  982,
+  1946
+ ],
+ "D_tiers": [
+  0,
+  1,
+  0,
+  1,
+  1,
+  2,
+  11
+ ],
+ "budgets": [
+  20,
+  50,
+  100,
+  200,
+  500,
+  1000,
+  2000
+ ],
+ "S_only_ids_20": [
+  "wbm-1-38115",
+  "wbm-1-36714"
+ ],
+ "C_only_ids_20": [
+  "wbm-3-52495",
+  "wbm-2-35012"
+ ],
+ "f1": {
+  "n_universe": 215488,
+  "n_used": 215488,
+  "skipped": 0,
+  "TP": 30939,
+  "FP": 2326,
+  "FN": 2003,
+  "TN": 180220,
+  "positives_truth": 32942,
+  "positives_pred": 33265,
+  "precision": 0.9300766571471517,
+  "recall": 0.9391961629530691,
+  "f1": 0.9346141646653678,
+  "card_f1": 0.935,
+  "abs_diff": 0.00038583533463221187,
+  "gate": "abs(F1-card)<=0.02",
+  "gate_pass": true,
+  "margin": 0.01961416466536779,
+  "exact_zero_pred_distance": 0,
+  "boundary_sensitivity": {
+   "truth_le_pred_lt_agree": 211159,
+   "truth_lt_pred_lt_agree": 211159,
+   "truth_lt_pred_le_agree": 211159
+  },
+  "oxide_unique_prototype_count": 23821
+ }
+}
