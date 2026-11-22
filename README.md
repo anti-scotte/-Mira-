@@ -1,8 +1,10 @@
 # 【B·组会前一晚｜材料科学】有限预算下预测模型的决策组
 
-**Demo** · [Mira 专家团配置分享](https://mira.deepprinciple.com/share/squad/txWEoOX5YRIy3Bx8zEXUtQ)　**现场复算** · [下载含两份原始输入的独立工作空间](workflow/指标敏感性专家团/四环节独立复验工作空间.zip)
+**Demo** · [Mira 专家团配置分享](https://mira.deepprinciple.com/share/squad/op-KMLkP0tnMdrHwAbh3GQ)　**现场复算** · [下载含两份原始输入的独立工作空间](https://github.com/anti-scotte/-Mira-/releases/download/v1.0.2-review/independent-reproduction.zip)
 
-复验包默认同时执行主实验与指标子实验。自首个执行节点启动起共用 60 分钟，两项结果分别输出；到时交付已完成部分及缺项。
+复验包默认同时执行主实验与指标子实验。从 Lead 实际开始执行起共用 60 分钟，两项结果分别输出；到时交付已完成部分及缺项。
+
+[主实验包](https://github.com/anti-scotte/-Mira-/releases/download/v1.0.2-review/main-experiment.zip) · [包内使用说明](workflow/指标敏感性专家团/README.md) · [仓库备用下载](https://raw.githubusercontent.com/anti-scotte/-Mira-/main/workflow/指标敏感性专家团/四环节独立复验工作空间.zip)
 
 **作品对话分享** · 冻结名单复验（vkbyw0ev）与 DAF 扩展（zzqvuo1g）的公开对话链接待生成。当前 Demo 链接可打开四环节专家团配置。
 
